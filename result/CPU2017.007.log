@@ -1,0 +1,2273 @@
+runcpu v5825 started at 2019-04-06 05:11:10 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=clang --size=test --copies=1 --noreportable --iterations=1 500.perlbench_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/clang.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   500.perlbench_r            
+-------------------------------------------------------------------------------
+
+Setting up environment for running 500.perlbench_r...
+Starting runcpu for 500.perlbench_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/clang.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base,peak
+Label     = test1-m64
+Size      = test
+benchmarks= 500.perlbench_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "/usr/lib/llvm-6.0/lib"
+LIBRARY_PATH = "/usr/lib/llvm-6.0/lib"
+PATH = "/usr/lib/llvm-6.0/bin:%{ENV_PATH}"
+
+Benchmarks selected: 500.perlbench_r
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_base.test1-m64), no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_peak.test1-m64), no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_base.test1-m64), no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_peak.test1-m64), no checksums were
+  found in the config file.  They will be installed after build.
+Compiling Binaries
+------------------------------------------------------------------------
+When checking options for /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_base.test1-m64, no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_base.test1-m64), no checksums were
+  found in the config file.  They will be installed after build.
+  Building 500.perlbench_r base test1-m64: (build_base_test1-m64.0000) [2019-04-06 05:11:12]
+Wrote to makefile '/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/build/build_base_test1-m64.0000/Makefile.deps':
+# End dependencies
+# These are the build dependencies
+$(addsuffix $(OBJ), $(basename XSUB.h)): XSUB.h perlapi.h
+$(addsuffix $(OBJ), $(basename av.c)): av.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename config.h)): config.h perl-orig-config.h spec_config.h
+$(addsuffix $(OBJ), $(basename cpan/Digest-SHA/src/sha.c)): cpan/Digest-SHA/src/sha.c cpan/Digest-SHA/src/sha.h cpan/Digest-SHA/src/sha64bit.c cpan/Digest-SHA/src/sha64bit.h
+$(addsuffix $(OBJ), $(basename deb.c)): deb.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename doio.c)): doio.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename doop.c)): doop.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename dump.c)): dump.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h mg_names.inc op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Cwd/Cwd.c)): ext/Cwd/Cwd.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Data/Dumper/Dumper.c)): ext/Data/Dumper/Dumper.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Devel/Peek/Peek.c)): ext/Devel/Peek/Peek.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Digest/MD5/MD5.c)): ext/Digest/MD5/MD5.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Digest/SHA/SHA.c)): ext/Digest/SHA/SHA.c EXTERN.h XSUB.h av.h config.h cop.h cpan/Digest-SHA/src/sha.c cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/File-Glob/Glob.c)): ext/File-Glob/Glob.c av.h config.h cop.h cv.h embed.h embedvar.h ext/File-Glob/const-c.inc form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/IO/IO.c)): ext/IO/IO.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h ext/IO/poll.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/IO/poll.c)): ext/IO/poll.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h ext/IO/poll.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/MIME/Base64/Base64.c)): ext/MIME/Base64/Base64.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Storable/Storable.c)): ext/Storable/Storable.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Sys/Hostname/Hostname.c)): ext/Sys/Hostname/Hostname.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Time/HiRes/HiRes.c)): ext/Time/HiRes/HiRes.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h ext/Time/HiRes/const-c.inc form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/attrs/attrs.c)): ext/attrs/attrs.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/re/re_comp.c)): ext/re/re_comp.c regcomp.c
+$(addsuffix $(OBJ), $(basename ext/re/re_exec.c)): ext/re/re_exec.c invlist_inline.h
+$(addsuffix $(OBJ), $(basename globals.c)): globals.c INTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename gv.c)): gv.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h overload.inc pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename hv.c)): hv.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename iperlsys.h)): iperlsys.h perlio.h
+$(addsuffix $(OBJ), $(basename locale.c)): locale.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename mg.c)): mg.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename non-core-ext/HTML/Parser/Parser.c)): non-core-ext/HTML/Parser/Parser.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h non-core-ext/HTML/Parser/hctype.h non-core-ext/HTML/Parser/hparser.c non-core-ext/HTML/Parser/hparser.h non-core-ext/HTML/Parser/parser-util.c non-core-ext/HTML/Parser/tokenpos.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename non-core-ext/HTML/Parser/hparser.c)): non-core-ext/HTML/Parser/hparser.c hctype.h tokenpos.h
+$(addsuffix $(OBJ), $(basename numeric.c)): numeric.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename op.c)): op.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h keywords.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pad.c)): pad.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perl.c)): perl.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perlapi.c)): perlapi.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perlhost.h)): perlhost.h iperlsys.h perlio.h vdir.h vmem.h
+$(addsuffix $(OBJ), $(basename perlio.c)): perlio.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perliol.h perlsdio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perlmain.c)): perlmain.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perly.c)): perly.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp.c)): pp.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h keywords.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h reentr.h regexp.h scope.h spec_config.h specrand/specrand.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_ctl.c)): pp_ctl.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_hot.c)): pp_hot.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_pack.c)): pp_pack.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h packsizetables.inc pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_sort.c)): pp_sort.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h specrand/specrand.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_sys.c)): pp_sys.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h reentr.h regexp.h scope.h spec_config.h sv.h thread.h time64.c utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename proto.h)): proto.h pp_proto.h
+$(addsuffix $(OBJ), $(basename reentr.c)): reentr.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h reentr.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename regcomp.c)): regcomp.c EXTERN.h INTERN.h av.h config.h cop.h cv.h dquote.c embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h invlist_inline.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename regexec.c)): regexec.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h invlist_inline.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename run.c)): run.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename scope.c)): scope.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename sv.c)): sv.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename taint.c)): taint.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename toke.c)): toke.c EXTERN.h av.h config.h cop.h cv.h dquote.c embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h keywords.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename universal.c)): universal.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perliol.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h vxs.inc warnings.h
+$(addsuffix $(OBJ), $(basename utf8.c)): utf8.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h invlist_inline.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename util.c)): util.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h specrand/specrand.h sv.h thread.h utf8.h util.h uudmap.h vutil.c warnings.h
+$(addsuffix $(OBJ), $(basename win32/perllib.c)): win32/perllib.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename win32/win32.c)): win32/win32.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h win32/win32iop.h
+$(addsuffix $(OBJ), $(basename win32/win32io.c)): win32/win32io.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perliol.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename win32/win32sck.c)): win32/win32sck.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h win32/win32iop.h
+$(addsuffix $(OBJ), $(basename win32/win32thread.c)): win32/win32thread.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h win32/win32.h win32/win32iop.h
+$(addsuffix $(OBJ), $(basename xsutils.c)): xsutils.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+Wrote to makefile '/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/build/build_base_test1-m64.0000/Makefile.spec':
+TUNE=base
+LABEL=test1-m64
+NUMBER=500
+NAME=perlbench_r
+SOURCES= av.c caretx.c deb.c doio.c doop.c dump.c globals.c gv.c hv.c \
+	 keywords.c locale.c mg.c numeric.c op.c pad.c perl.c perlapi.c perlio.c \
+	 perlmain.c perly.c pp.c pp_ctl.c pp_hot.c pp_pack.c pp_sort.c pp_sys.c \
+	 regcomp.c regexec.c run.c scope.c sv.c taint.c toke.c universal.c utf8.c \
+	 util.c reentr.c mro_core.c mathoms.c specrand/specrand.c \
+	 dist/PathTools/Cwd.c dist/Data-Dumper/Dumper.c ext/Devel-Peek/Peek.c \
+	 cpan/Digest-MD5/MD5.c cpan/Digest-SHA/SHA.c DynaLoader.c dist/IO/IO.c \
+	 dist/IO/poll.c cpan/MIME-Base64/Base64.c Opcode.c \
+	 dist/Storable/Storable.c ext/Sys-Hostname/Hostname.c \
+	 cpan/Time-HiRes/HiRes.c ext/XS-Typemap/stdio.c \
+	 ext/attributes/attributes.c cpan/HTML-Parser/Parser.c ext/mro/mro.c \
+	 ext/re/re.c ext/re/re_comp.c ext/re/re_exec.c ext/arybase/arybase.c \
+	 ext/PerlIO-scalar/scalar.c ext/PerlIO-via/via.c ext/File-Glob/bsd_glob.c \
+	 ext/File-Glob/Glob.c ext/Hash-Util/Util.c \
+	 ext/Hash-Util-FieldHash/FieldHash.c \
+	 ext/Tie-Hash-NamedCapture/NamedCapture.c \
+	 cpan/Scalar-List-Utils/ListUtil.c
+EXEBASE=perlbench_r
+NEED_MATH=yes
+BENCHLANG=C
+BASE_DIR         = /usr/lib
+BENCH_FLAGS      = -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+CC               = $(LLVM_BIN_PATH)/clang -m64
+CC_VERSION_OPTION = -v
+CLD              = $(LLVM_BIN_PATH)/clang -m64
+COPTIMIZE        = -O3 -mavx
+CXX              = $(LLVM_BIN_PATH)/clang++ -m64
+CXXOPTIMIZE      = -O3 -mavx
+CXX_VERSION_OPTION = -v
+DRAGONEGG_PATH   = /usr/lib/llvm-6.0/dragonegg
+DRAGONEGG_SPECS  = /usr/lib/llvm-6.0/dragonegg/integrated-as.specs
+EXTRA_FFLAGS     = -fplugin=$(DRAGONEGG_PATH)/dragonegg.so
+EXTRA_FLIBS      = -lgfortran -lm
+EXTRA_PORTABILITY = -DSPEC_LP64
+FC               = $(FORTRAN_COMP) -m64
+FC_VERSION_OPTION = -v
+FLD              = $(LLVM_BIN_PATH)/clang -m64
+FOPTIMIZE        = -O3 -mavx -funroll-loops
+FORTRAN_COMP     = $(GFORTRAN_DIR)/gfortran
+GFORTRAN_DIR     = /usr/lib/llvm-6.0/gcc-4.8.2/bin
+LDCFLAGS         = -z muldefs
+LDOPTIMIZE       = -z muldefs
+LLVM_BIN_PATH    = /usr/lib/llvm-6.0/bin
+LLVM_GCC_DIR     = /usr/lib/llvm-6.0/gcc-4.8.2
+LLVM_INCLUDE_PATH = /usr/lib/llvm-6.0/include
+LLVM_LIB_PATH    = /usr/lib/llvm-6.0/lib
+LLVM_PATH        = /usr/lib/llvm-6.0
+LLVM_ROOT_PATH   = /usr/lib/llvm-6.0
+OPENMP_DIR       = /usr/lib/lib/libomp_oss/exports
+OS               = unix
+PORTABILITY      = -DSPEC_LINUX_X64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_label_override = 0
+backup_config    = 1
+baseexe          = perlbench_r
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 500.perlbench_r
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = no
+changedhash      = 0
+check_version    = 0
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = perlbench_r_base.test1-m64
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+comparedir       = compare
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configfile       = clang
+configpath       = /home/iiitd/Desktop/hw11/config/clang.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+default_submit   = $command
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = 
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 0
+enable_monitor   = 1
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+exthash_bits     = 256
+failflags        = 0
+fake             = 0
+feedback         = 1
+flag_url_base    = https://www.spec.org/auto/cpu2017/Docs/benchmarks/flags/
+floatcompare     = yes
+force_monitor    = 0
+from_runcpu      = 2
+fw_bios          = 
+hostname         = iiit-d
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = 
+hw_cpu_max_mhz   = 
+hw_cpu_name      = Intel Core i5-7500
+hw_cpu_nominal_mhz = 
+hw_disk          = 341 GB  add more disk info here
+hw_memory001     = 7.677 GB fixme: If using DDR4, the format is:
+hw_memory002     = 'N GB (N x N GB nRxn PC4-nnnnX-X)'
+hw_model         = 
+hw_nchips        = 1
+hw_ncores        = 
+hw_ncpuorder     = 
+hw_nthreadspercore = 
+hw_ocache        = 
+hw_other         = 
+hw_pcache        = 
+hw_scache        = 
+hw_tcache        = 
+hw_vendor        = My Corporation
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+inputgenerrfile  = inputgen.err
+inputgenfile     = inputgen.cmd
+inputgenoutfile  = inputgen.out
+inputgenstdoutfile = inputgen.stdout
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+label            = test1-m64
+license_num      = nnn (Your SPEC license number)
+line_width       = 1020
+link_input_files = 1
+locking          = 1
+log              = CPU2017
+log_line_width   = 1020
+log_timestamp    = 0
+logfile          = /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0
+logname          = /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0
+lognum           = 007.0
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = --jobs=4
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 3
+max_unknown_uncertainty = 1
+mean_anyway      = 1
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 2
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = perlbench_r
+nansupport       = no
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+noratios         = 0
+note_preenv      = 1
+notes_plat_sysinfo_000 =  Sysinfo program /home/iiitd/Desktop/hw11/bin/sysinfo
+notes_plat_sysinfo_005 =  Rev: r5974 of 2018-05-19 9bcde8f2999c33d61f64985e45859ea9
+notes_plat_sysinfo_010 =  running on iiit-d Sat Apr  6 05:11:12 2019
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  SUT (System Under Test) info as seen by some common utilities.
+notes_plat_sysinfo_025 =  For more information on this section, see
+notes_plat_sysinfo_030 =     https://www.spec.org/cpu2017/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+notes_plat_sysinfo_050 =        1  "physical id"s (chips)
+notes_plat_sysinfo_055 =        4 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent. The following
+notes_plat_sysinfo_065 =     excerpts from /proc/cpuinfo might not be reliable.  Use with caution.)
+notes_plat_sysinfo_070 =        cpu cores : 4
+notes_plat_sysinfo_075 =        siblings  : 4
+notes_plat_sysinfo_080 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_085 = 
+notes_plat_sysinfo_090 =  From lscpu:
+notes_plat_sysinfo_095 =       Architecture:        x86_64
+notes_plat_sysinfo_100 =       CPU op-mode(s):      32-bit, 64-bit
+notes_plat_sysinfo_105 =       Byte Order:          Little Endian
+notes_plat_sysinfo_110 =       CPU(s):              4
+notes_plat_sysinfo_115 =       On-line CPU(s) list: 0-3
+notes_plat_sysinfo_120 =       Thread(s) per core:  1
+notes_plat_sysinfo_125 =       Core(s) per socket:  4
+notes_plat_sysinfo_130 =       Socket(s):           1
+notes_plat_sysinfo_135 =       NUMA node(s):        1
+notes_plat_sysinfo_140 =       Vendor ID:           GenuineIntel
+notes_plat_sysinfo_145 =       CPU family:          6
+notes_plat_sysinfo_150 =       Model:               158
+notes_plat_sysinfo_155 =       Model name:          Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+notes_plat_sysinfo_160 =       Stepping:            9
+notes_plat_sysinfo_165 =       CPU MHz:             3602.576
+notes_plat_sysinfo_170 =       CPU max MHz:         3800.0000
+notes_plat_sysinfo_175 =       CPU min MHz:         800.0000
+notes_plat_sysinfo_180 =       BogoMIPS:            6816.00
+notes_plat_sysinfo_185 =       Virtualization:      VT-x
+notes_plat_sysinfo_190 =       L1d cache:           32K
+notes_plat_sysinfo_195 =       L1i cache:           32K
+notes_plat_sysinfo_200 =       L2 cache:            256K
+notes_plat_sysinfo_205 =       L3 cache:            6144K
+notes_plat_sysinfo_210 =       NUMA node0 CPU(s):   0-3
+notes_plat_sysinfo_215 =       Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
+notes_plat_sysinfo_220 =       pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp
+notes_plat_sysinfo_225 =       lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid
+notes_plat_sysinfo_230 =       aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3
+notes_plat_sysinfo_235 =       sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer
+notes_plat_sysinfo_240 =       aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single
+notes_plat_sysinfo_245 =       pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust
+notes_plat_sysinfo_250 =       bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt
+notes_plat_sysinfo_255 =       xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window
+notes_plat_sysinfo_260 =       hwp_epp flush_l1d
+notes_plat_sysinfo_265 = 
+notes_plat_sysinfo_270 =  /proc/cpuinfo cache data
+notes_plat_sysinfo_275 =     cache size : 6144 KB
+notes_plat_sysinfo_280 = 
+notes_plat_sysinfo_285 =  From numactl --hardware  WARNING: a numactl 'node' might or might not correspond to a
+notes_plat_sysinfo_290 =  physical chip.
+notes_plat_sysinfo_295 = 
+notes_plat_sysinfo_300 =  From /proc/meminfo
+notes_plat_sysinfo_305 =     MemTotal:        8049856 kB
+notes_plat_sysinfo_310 =     HugePages_Total:     128
+notes_plat_sysinfo_315 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_320 = 
+notes_plat_sysinfo_325 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_330 =     Ubuntu 18.04.1 LTS
+notes_plat_sysinfo_335 = 
+notes_plat_sysinfo_340 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_345 =     debian_version: buster/sid
+notes_plat_sysinfo_350 =     os-release:
+notes_plat_sysinfo_355 =        NAME="Ubuntu"
+notes_plat_sysinfo_360 =        VERSION="18.04.1 LTS (Bionic Beaver)"
+notes_plat_sysinfo_365 =        ID=ubuntu
+notes_plat_sysinfo_370 =        ID_LIKE=debian
+notes_plat_sysinfo_375 =        PRETTY_NAME="Ubuntu 18.04.1 LTS"
+notes_plat_sysinfo_380 =        VERSION_ID="18.04"
+notes_plat_sysinfo_385 =        HOME_URL="https://www.ubuntu.com/"
+notes_plat_sysinfo_390 =        SUPPORT_URL="https://help.ubuntu.com/"
+notes_plat_sysinfo_395 = 
+notes_plat_sysinfo_400 =  uname -a:
+notes_plat_sysinfo_405 =     Linux iiit-d 4.15.0-46-generic \#49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019 x86_64
+notes_plat_sysinfo_410 =     x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_415 = 
+notes_plat_sysinfo_420 =  Kernel self-reported vulnerability status:
+notes_plat_sysinfo_425 = 
+notes_plat_sysinfo_430 =  CVE-2017-5754 (Meltdown):          Mitigation: PTI
+notes_plat_sysinfo_435 =  CVE-2017-5753 (Spectre variant 1): Mitigation: __user pointer sanitization
+notes_plat_sysinfo_440 =  CVE-2017-5715 (Spectre variant 2): Mitigation: Full generic retpoline, IBPB, IBRS_FW
+notes_plat_sysinfo_445 = 
+notes_plat_sysinfo_450 =  run-level 5 2019-04-05 19:29
+notes_plat_sysinfo_455 = 
+notes_plat_sysinfo_460 =  SPEC is set to: /home/iiitd/Desktop/hw11
+notes_plat_sysinfo_465 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_470 =     /dev/sda4      ext4  341G  140G  184G  44% /
+notes_plat_sysinfo_475 = 
+notes_plat_sysinfo_480 =  Additional information from dmidecode follows.  WARNING: Use caution when you interpret
+notes_plat_sysinfo_485 =  this section. The 'dmidecode' program reads system data which is "intended to allow
+notes_plat_sysinfo_490 =  hardware to be accurately determined", but the intent may not be met, as there are
+notes_plat_sysinfo_495 =  frequent changes to hardware, firmware, and the "DMTF SMBIOS" standard.
+notes_plat_sysinfo_500 = 
+notes_plat_sysinfo_505 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 500
+obiwan           = 
+os_exe_ext       = 
+output_format    = txt,html,cfg,pdf,csv
+output_root      = 
+outputdir        = output
+parallel_test    = 1
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r
+plain_train      = 1
+platform         = 
+power            = 0
+preENV_LD_LIBRARY_PATH = /usr/lib/llvm-6.0/lib
+preENV_LIBRARY_PATH = /usr/lib/llvm-6.0/lib
+preENV_PATH      = /usr/lib/llvm-6.0/bin:%{ENV_PATH}
+preenv           = 0
+prefix           = 
+prepared_by      = iiitd  (is never output, only tags rawfile)
+ranks            = 1
+rawhash_bits     = 256
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+runcpu           = /home/iiitd/Desktop/hw11/bin/harness/runcpu --configfile clang --size test --copies 1 --noreportable --iterations 1 --noreportable --nopower --runmode rate --tune base:peak --size test 500.perlbench_r --nopreenv --note-preenv --logfile /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0 --lognum 007.0 --from_runcpu 2
+rundir           = run
+runmode          = rate
+safe_eval        = 1
+save_build_files = 
+section_specifier_fatal = 1
+setprocgroup     = 1
+setup_error      = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+srcsource        = /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/src
+stagger          = 10
+strict_rundir_verify = 1
+submit_default   = echo "$command" > run.sh ; $BIND bash run.sh
+sw_avail         = 
+sw_base_ptrsize  = 64-bit
+sw_compiler001   = C/C++: Version 3.9.0 of Clang, the
+sw_compiler002   = LLVM Compiler Infrastructure
+sw_compiler003   = Fortran: Version 4.8.2 of GCC, the
+sw_compiler004   = GNU Compiler Collection
+sw_compiler005   = DragonEgg: Version 3.5.2, the
+sw_compiler006   = LLVM Compiler Infrastructure
+sw_file          = ext4
+sw_os001         = Ubuntu 18.04.1 LTS
+sw_os002         = 4.15.0-46-generic
+sw_other         = 
+sw_peak_ptrsize  = 64-bit
+sw_state         = Run level 5 (add definition here)
+sysinfo_hash_bits = 256
+sysinfo_program  = specperl /home/iiitd/Desktop/hw11/bin/sysinfo
+sysinfo_program_hash = sysinfo:SHA:32259ebd59f3e93740723202f27c44c82ee68e0f2e40cd2ca50cfd5519772397
+table            = 1
+teeout           = 0
+test_date        = Apr-2019
+test_sponsor     = My Corporation
+tester           = My Corporation
+threads          = 1
+top              = /home/iiitd/Desktop/hw11
+train_single_thread = 0
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+uncertainty_exception = 5
+update           = 0
+update_url       = http://www.spec.org/auto/cpu2017/updates/
+use_submit_for_compare = 0
+use_submit_for_speed = 0
+username         = iiitd
+verbose          = 5
+verify_binaries  = 1
+version          = 0.906000
+version_url      = http://www.spec.org/auto/cpu2017/current_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.1.out suns.out validate
+  Compile for '500.perlbench_r' started at: 2019-04-06 05:11:12 (1554507672)
+Issuing make.clean command 'specmake --output-sync --jobs=4 clean'
+Start make.clean command: 2019-04-06 05:11:12 (1554507672.74914)
+rm -rf *.o  diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.1.out suns.out validate
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf perlbench_r
+rm -rf perlbench_r.exe
+rm -rf core
+Stop make.clean command: 2019-04-06 05:11:12 (1554507672.91528)
+Elapsed time for make.clean command: 00:00:00 (0.166136980056763)
+Issuing make command 'specmake --output-sync --jobs=4 build'
+Start make command: 2019-04-06 05:11:12 (1554507672.91629)
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o caretx.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  caretx.c
+In file included from caretx.c:32:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o deb.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  deb.c
+In file included from deb.c:25:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o av.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  av.c
+In file included from av.c:24:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o globals.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  globals.c
+In file included from globals.c:32:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o doio.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  doio.c
+In file included from doio.c:27:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o doop.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  doop.c
+In file included from doop.c:24:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dump.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dump.c
+In file included from dump.c:29:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o locale.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  locale.c
+In file included from locale.c:37:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o hv.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  hv.c
+In file included from hv.c:35:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o keywords.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  keywords.c
+In file included from keywords.c:9:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o numeric.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  numeric.c
+In file included from numeric.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o gv.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  gv.c
+In file included from gv.c:36:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o mg.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  mg.c
+In file included from mg.c:43:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perlapi.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perlapi.c
+In file included from perlapi.c:28:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pad.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pad.c
+In file included from pad.c:147:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perlmain.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perlmain.c
+In file included from perlmain.c:43:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perl.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perl.c
+In file included from perl.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perly.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perly.c
+In file included from perly.c:26:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perlio.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perlio.c
+In file included from perlio.c:43:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp.c
+In file included from pp.c:28:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_hot.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_hot.c
+In file included from pp_hot.c:36:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_ctl.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_ctl.c
+In file included from pp_ctl.c:35:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o op.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  op.c
+In file included from op.c:103:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_sort.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_sort.c
+In file included from pp_sort.c:31:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_sys.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_sys.c
+In file included from pp_sys.c:31:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o run.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  run.c
+In file included from run.c:26:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o scope.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  scope.c
+In file included from scope.c:27:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_pack.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_pack.c
+In file included from pp_pack.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o taint.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  taint.c
+In file included from taint.c:24:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o regexec.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  regexec.c
+In file included from regexec.c:78:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o sv.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  sv.c
+In file included from sv.c:32:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o universal.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  universal.c
+In file included from universal.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o utf8.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  utf8.c
+In file included from utf8.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o reentr.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  reentr.c
+In file included from reentr.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o util.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  util.c
+In file included from util.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o regcomp.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  regcomp.c
+In file included from regcomp.c:75:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o specrand/specrand.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  specrand/specrand.c
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o mro_core.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  mro_core.c
+In file included from mro_core.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o mathoms.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  mathoms.c
+In file included from mathoms.c:46:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/PathTools/Cwd.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/PathTools/Cwd.c
+In file included from dist/PathTools/Cwd.c:21:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Devel-Peek/Peek.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Devel-Peek/Peek.c
+In file included from ext/Devel-Peek/Peek.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Digest-MD5/MD5.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Digest-MD5/MD5.c
+In file included from cpan/Digest-MD5/MD5.c:52:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/Data-Dumper/Dumper.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/Data-Dumper/Dumper.c
+In file included from dist/Data-Dumper/Dumper.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o DynaLoader.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  DynaLoader.c
+In file included from DynaLoader.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/IO/poll.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/IO/poll.c
+In file included from dist/IO/poll.c:14:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/IO/IO.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/IO/IO.c
+In file included from dist/IO/IO.c:25:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/MIME-Base64/Base64.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/MIME-Base64/Base64.c
+In file included from cpan/MIME-Base64/Base64.c:42:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o Opcode.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  Opcode.c
+In file included from Opcode.c:15:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Sys-Hostname/Hostname.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Sys-Hostname/Hostname.c
+In file included from ext/Sys-Hostname/Hostname.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Time-HiRes/HiRes.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Time-HiRes/HiRes.c
+In file included from cpan/Time-HiRes/HiRes.c:31:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/XS-Typemap/stdio.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/XS-Typemap/stdio.c
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Digest-SHA/SHA.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Digest-SHA/SHA.c
+In file included from cpan/Digest-SHA/SHA.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/attributes/attributes.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/attributes/attributes.c
+In file included from ext/attributes/attributes.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/mro/mro.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/mro/mro.c
+In file included from ext/mro/mro.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/re/re.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/re/re.c
+In file included from ext/re/re.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o toke.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  toke.c
+In file included from toke.c:40:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/Storable/Storable.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/Storable/Storable.c
+In file included from dist/Storable/Storable.c:26:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/arybase/arybase.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/arybase/arybase.c
+In file included from ext/arybase/arybase.c:17:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/PerlIO-scalar/scalar.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/PerlIO-scalar/scalar.c
+In file included from ext/PerlIO-scalar/scalar.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/HTML-Parser/Parser.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/HTML-Parser/Parser.c
+In file included from cpan/HTML-Parser/Parser.c:35:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/PerlIO-via/via.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/PerlIO-via/via.c
+In file included from ext/PerlIO-via/via.c:15:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/File-Glob/bsd_glob.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/File-Glob/bsd_glob.c
+In file included from ext/File-Glob/bsd_glob.c:69:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/File-Glob/Glob.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/File-Glob/Glob.c
+In file included from ext/File-Glob/Glob.c:17:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Hash-Util/Util.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Hash-Util/Util.c
+In file included from ext/Hash-Util/Util.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Tie-Hash-NamedCapture/NamedCapture.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Tie-Hash-NamedCapture/NamedCapture.c
+In file included from ext/Tie-Hash-NamedCapture/NamedCapture.c:15:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Hash-Util-FieldHash/FieldHash.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Hash-Util-FieldHash/FieldHash.c
+In file included from ext/Hash-Util-FieldHash/FieldHash.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Scalar-List-Utils/ListUtil.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Scalar-List-Utils/ListUtil.c
+In file included from cpan/Scalar-List-Utils/ListUtil.c:21:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/re/re_exec.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/re/re_exec.c
+In file included from ext/re/re_exec.c:78:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/re/re_comp.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/re/re_comp.c
+In file included from ext/re/re_comp.c:26:
+In file included from ext/re/../../regcomp.c:75:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -O3 -mavx   -z muldefs -DSPEC_LINUX_X64     av.o caretx.o deb.o doio.o doop.o dump.o globals.o gv.o hv.o keywords.o locale.o mg.o numeric.o op.o pad.o perl.o perlapi.o perlio.o perlmain.o perly.o pp.o pp_ctl.o pp_hot.o pp_pack.o pp_sort.o pp_sys.o regcomp.o regexec.o run.o scope.o sv.o taint.o toke.o universal.o utf8.o util.o reentr.o mro_core.o mathoms.o specrand/specrand.o dist/PathTools/Cwd.o dist/Data-Dumper/Dumper.o ext/Devel-Peek/Peek.o cpan/Digest-MD5/MD5.o cpan/Digest-SHA/SHA.o DynaLoader.o dist/IO/IO.o dist/IO/poll.o cpan/MIME-Base64/Base64.o Opcode.o dist/Storable/Storable.o ext/Sys-Hostname/Hostname.o cpan/Time-HiRes/HiRes.o ext/XS-Typemap/stdio.o ext/attributes/attributes.o cpan/HTML-Parser/Parser.o ext/mro/mro.o ext/re/re.o ext/re/re_comp.o ext/re/re_exec.o ext/arybase/arybase.o ext/PerlIO-scalar/scalar.o ext/PerlIO-via/via.o ext/File-Glob/bsd_glob.o ext/File-Glob/Glob.o ext/Hash-Util/Util.o ext/Hash-Util-FieldHash/FieldHash.o ext/Tie-Hash-Name
+dCapture/NamedCapture.o cpan/Scalar-List-Utils/ListUtil.o             -lm         -o perlbench_r  
+Stop make command: 2019-04-06 05:11:44 (1554507704.14448)
+Elapsed time for make command: 00:00:31 (31.2281899452209)
+Issuing options command 'specmake --output-sync --jobs=4 options'
+Start options command: 2019-04-06 05:11:44 (1554507704.14551)
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -mavx"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -O3 -mavx   -z muldefs -DSPEC_LINUX_X64     <objects>   -lm         -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-O3 -mavx"
+O: LDOPTIMIZE="-z muldefs"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: 2019-04-06 05:11:44 (1554507704.30931)
+Elapsed time for options command: 00:00:00 (0.163798809051514)
+Issuing compiler-version command 'specmake --output-sync --jobs=4 compiler-version'
+Start compiler-version command: 2019-04-06 05:11:44 (1554507704.3106)
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D PERL_CORE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I dist/IO' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/Time-HiRes' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/HTML-Parser' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ext/re' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I specrand' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D DOUBLE_SLASHES_SPECIAL=0' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGE_FILES' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGEFILE_SOURCE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _FILE_OFFSET_BITS=64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-O3' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LINUX_X64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+Stop compiler-version command: 2019-04-06 05:11:44 (1554507704.48718)
+Elapsed time for compiler-version command: 00:00:00 (0.176578998565674)
+  Compile for '500.perlbench_r' ended at: 2019-04-06 05:11:44 (1554507704)
+  Elapsed compile for '500.perlbench_r': 00:00:32 (32)
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -O3 -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -mavx"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -O3 -mavx   -z muldefs -DSPEC_LINUX_X64     <objects>   -lm         -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-O3 -mavx"
+O: LDOPTIMIZE="-z muldefs"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D PERL_CORE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I dist/IO' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/Time-HiRes' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/HTML-Parser' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ext/re' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I specrand' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D DOUBLE_SLASHES_SPECIAL=0' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGE_FILES' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGEFILE_SOURCE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _FILE_OFFSET_BITS=64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-O3' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LINUX_X64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+------------------------------------------------------------------------
+When checking options for /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_peak.test1-m64, no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/exe/perlbench_r_peak.test1-m64), no checksums were
+  found in the config file.  They will be installed after build.
+  Building 500.perlbench_r peak test1-m64: (build_peak_test1-m64.0000) [2019-04-06 05:11:44]
+Wrote to makefile '/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/build/build_peak_test1-m64.0000/Makefile.deps':
+# End dependencies
+# These are the build dependencies
+$(addsuffix $(OBJ), $(basename XSUB.h)): XSUB.h perlapi.h
+$(addsuffix $(OBJ), $(basename av.c)): av.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename config.h)): config.h perl-orig-config.h spec_config.h
+$(addsuffix $(OBJ), $(basename cpan/Digest-SHA/src/sha.c)): cpan/Digest-SHA/src/sha.c cpan/Digest-SHA/src/sha.h cpan/Digest-SHA/src/sha64bit.c cpan/Digest-SHA/src/sha64bit.h
+$(addsuffix $(OBJ), $(basename deb.c)): deb.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename doio.c)): doio.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename doop.c)): doop.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename dump.c)): dump.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h mg_names.inc op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Cwd/Cwd.c)): ext/Cwd/Cwd.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Data/Dumper/Dumper.c)): ext/Data/Dumper/Dumper.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Devel/Peek/Peek.c)): ext/Devel/Peek/Peek.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Digest/MD5/MD5.c)): ext/Digest/MD5/MD5.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Digest/SHA/SHA.c)): ext/Digest/SHA/SHA.c EXTERN.h XSUB.h av.h config.h cop.h cpan/Digest-SHA/src/sha.c cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/File-Glob/Glob.c)): ext/File-Glob/Glob.c av.h config.h cop.h cv.h embed.h embedvar.h ext/File-Glob/const-c.inc form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/IO/IO.c)): ext/IO/IO.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h ext/IO/poll.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/IO/poll.c)): ext/IO/poll.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h ext/IO/poll.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/MIME/Base64/Base64.c)): ext/MIME/Base64/Base64.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Storable/Storable.c)): ext/Storable/Storable.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Sys/Hostname/Hostname.c)): ext/Sys/Hostname/Hostname.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/Time/HiRes/HiRes.c)): ext/Time/HiRes/HiRes.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h ext/Time/HiRes/const-c.inc form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/attrs/attrs.c)): ext/attrs/attrs.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename ext/re/re_comp.c)): ext/re/re_comp.c regcomp.c
+$(addsuffix $(OBJ), $(basename ext/re/re_exec.c)): ext/re/re_exec.c invlist_inline.h
+$(addsuffix $(OBJ), $(basename globals.c)): globals.c INTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename gv.c)): gv.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h overload.inc pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename hv.c)): hv.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename iperlsys.h)): iperlsys.h perlio.h
+$(addsuffix $(OBJ), $(basename locale.c)): locale.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename mg.c)): mg.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename non-core-ext/HTML/Parser/Parser.c)): non-core-ext/HTML/Parser/Parser.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h non-core-ext/HTML/Parser/hctype.h non-core-ext/HTML/Parser/hparser.c non-core-ext/HTML/Parser/hparser.h non-core-ext/HTML/Parser/parser-util.c non-core-ext/HTML/Parser/tokenpos.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename non-core-ext/HTML/Parser/hparser.c)): non-core-ext/HTML/Parser/hparser.c hctype.h tokenpos.h
+$(addsuffix $(OBJ), $(basename numeric.c)): numeric.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename op.c)): op.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h keywords.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pad.c)): pad.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perl.c)): perl.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perlapi.c)): perlapi.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perlhost.h)): perlhost.h iperlsys.h perlio.h vdir.h vmem.h
+$(addsuffix $(OBJ), $(basename perlio.c)): perlio.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perliol.h perlsdio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perlmain.c)): perlmain.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename perly.c)): perly.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp.c)): pp.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h keywords.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h reentr.h regexp.h scope.h spec_config.h specrand/specrand.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_ctl.c)): pp_ctl.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_hot.c)): pp_hot.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_pack.c)): pp_pack.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h packsizetables.inc pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_sort.c)): pp_sort.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h specrand/specrand.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename pp_sys.c)): pp_sys.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h reentr.h regexp.h scope.h spec_config.h sv.h thread.h time64.c utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename proto.h)): proto.h pp_proto.h
+$(addsuffix $(OBJ), $(basename reentr.c)): reentr.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h reentr.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename regcomp.c)): regcomp.c EXTERN.h INTERN.h av.h config.h cop.h cv.h dquote.c embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h invlist_inline.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename regexec.c)): regexec.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h invlist_inline.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename run.c)): run.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename scope.c)): scope.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename sv.c)): sv.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regcharclass.h regcomp.h regexp.h regnodes.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename taint.c)): taint.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename toke.c)): toke.c EXTERN.h av.h config.h cop.h cv.h dquote.c embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h keywords.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename universal.c)): universal.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perliol.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h vxs.inc warnings.h
+$(addsuffix $(OBJ), $(basename utf8.c)): utf8.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h invlist_inline.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename util.c)): util.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h specrand/specrand.h sv.h thread.h utf8.h util.h uudmap.h vutil.c warnings.h
+$(addsuffix $(OBJ), $(basename win32/perllib.c)): win32/perllib.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename win32/win32.c)): win32/win32.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h win32/win32iop.h
+$(addsuffix $(OBJ), $(basename win32/win32io.c)): win32/win32io.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perliol.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+$(addsuffix $(OBJ), $(basename win32/win32sck.c)): win32/win32sck.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h win32/win32iop.h
+$(addsuffix $(OBJ), $(basename win32/win32thread.c)): win32/win32thread.c EXTERN.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h win32/win32.h win32/win32iop.h
+$(addsuffix $(OBJ), $(basename xsutils.c)): xsutils.c EXTERN.h XSUB.h av.h config.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h hv.h intrpvar.h iperlsys.h mg.h op.h opcode.h opnames.h overload.h pad.h parser.h patchlevel.h perl-orig-config.h perl.h perlapi.h perlio.h perlvars.h perly.h pp.h pp_proto.h proto.h regexp.h scope.h spec_config.h sv.h thread.h utf8.h util.h uudmap.h warnings.h
+Wrote to makefile '/home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/build/build_peak_test1-m64.0000/Makefile.spec':
+TUNE=peak
+LABEL=test1-m64
+NUMBER=500
+NAME=perlbench_r
+SOURCES= av.c caretx.c deb.c doio.c doop.c dump.c globals.c gv.c hv.c \
+	 keywords.c locale.c mg.c numeric.c op.c pad.c perl.c perlapi.c perlio.c \
+	 perlmain.c perly.c pp.c pp_ctl.c pp_hot.c pp_pack.c pp_sort.c pp_sys.c \
+	 regcomp.c regexec.c run.c scope.c sv.c taint.c toke.c universal.c utf8.c \
+	 util.c reentr.c mro_core.c mathoms.c specrand/specrand.c \
+	 dist/PathTools/Cwd.c dist/Data-Dumper/Dumper.c ext/Devel-Peek/Peek.c \
+	 cpan/Digest-MD5/MD5.c cpan/Digest-SHA/SHA.c DynaLoader.c dist/IO/IO.c \
+	 dist/IO/poll.c cpan/MIME-Base64/Base64.c Opcode.c \
+	 dist/Storable/Storable.c ext/Sys-Hostname/Hostname.c \
+	 cpan/Time-HiRes/HiRes.c ext/XS-Typemap/stdio.c \
+	 ext/attributes/attributes.c cpan/HTML-Parser/Parser.c ext/mro/mro.c \
+	 ext/re/re.c ext/re/re_comp.c ext/re/re_exec.c ext/arybase/arybase.c \
+	 ext/PerlIO-scalar/scalar.c ext/PerlIO-via/via.c ext/File-Glob/bsd_glob.c \
+	 ext/File-Glob/Glob.c ext/Hash-Util/Util.c \
+	 ext/Hash-Util-FieldHash/FieldHash.c \
+	 ext/Tie-Hash-NamedCapture/NamedCapture.c \
+	 cpan/Scalar-List-Utils/ListUtil.c
+EXEBASE=perlbench_r
+NEED_MATH=yes
+BENCHLANG=C
+BASE_DIR         = /usr/lib
+BENCH_FLAGS      = -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+CC               = $(LLVM_BIN_PATH)/clang -m64
+CC_VERSION_OPTION = -v
+CLD              = $(LLVM_BIN_PATH)/clang -m64
+COPTIMIZE        = -Ofast -mavx
+CXX              = $(LLVM_BIN_PATH)/clang++ -m64
+CXXOPTIMIZE      = -O3 -mavx
+CXX_VERSION_OPTION = -v
+DRAGONEGG_PATH   = /usr/lib/llvm-6.0/dragonegg
+DRAGONEGG_SPECS  = /usr/lib/llvm-6.0/dragonegg/integrated-as.specs
+EXTRA_FFLAGS     = -fplugin=$(DRAGONEGG_PATH)/dragonegg.so
+EXTRA_FLIBS      = -lgfortran -lm
+EXTRA_PORTABILITY = -DSPEC_LP64
+FC               = $(FORTRAN_COMP) -m64
+FC_VERSION_OPTION = -v
+FLD              = $(LLVM_BIN_PATH)/clang -m64
+FOPTIMIZE        = -Ofast -mavx -funroll-loops -fno-stack-arrays
+FORTRAN_COMP     = $(GFORTRAN_DIR)/gfortran
+GFORTRAN_DIR     = /usr/lib/llvm-6.0/gcc-4.8.2/bin
+LDCFLAGS         = -z muldefs
+LLVM_BIN_PATH    = /usr/lib/llvm-6.0/bin
+LLVM_GCC_DIR     = /usr/lib/llvm-6.0/gcc-4.8.2
+LLVM_INCLUDE_PATH = /usr/lib/llvm-6.0/include
+LLVM_LIB_PATH    = /usr/lib/llvm-6.0/lib
+LLVM_PATH        = /usr/lib/llvm-6.0
+LLVM_ROOT_PATH   = /usr/lib/llvm-6.0
+OPENMP_DIR       = /usr/lib/lib/libomp_oss/exports
+OS               = unix
+PORTABILITY      = -DSPEC_LINUX_X64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_label_override = 0
+backup_config    = 1
+baseexe          = perlbench_r
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 500.perlbench_r
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = no
+changedhash      = 0
+check_version    = 0
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = perlbench_r_peak.test1-m64
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+comparedir       = compare
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configfile       = clang
+configpath       = /home/iiitd/Desktop/hw11/config/clang.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+default_submit   = $command
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = 
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 0
+enable_monitor   = 1
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+exthash_bits     = 256
+failflags        = 0
+fake             = 0
+feedback         = 1
+flag_url_base    = https://www.spec.org/auto/cpu2017/Docs/benchmarks/flags/
+floatcompare     = yes
+force_monitor    = 0
+from_runcpu      = 2
+fw_bios          = 
+hostname         = iiit-d
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = 
+hw_cpu_max_mhz   = 
+hw_cpu_name      = Intel Core i5-7500
+hw_cpu_nominal_mhz = 
+hw_disk          = 341 GB  add more disk info here
+hw_memory001     = 7.677 GB fixme: If using DDR4, the format is:
+hw_memory002     = 'N GB (N x N GB nRxn PC4-nnnnX-X)'
+hw_model         = 
+hw_nchips        = 1
+hw_ncores        = 
+hw_ncpuorder     = 
+hw_nthreadspercore = 
+hw_ocache        = 
+hw_other         = 
+hw_pcache        = 
+hw_scache        = 
+hw_tcache        = 
+hw_vendor        = My Corporation
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+inputgenerrfile  = inputgen.err
+inputgenfile     = inputgen.cmd
+inputgenoutfile  = inputgen.out
+inputgenstdoutfile = inputgen.stdout
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+label            = test1-m64
+license_num      = nnn (Your SPEC license number)
+line_width       = 1020
+link_input_files = 1
+locking          = 1
+log              = CPU2017
+log_line_width   = 1020
+log_timestamp    = 0
+logfile          = /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0
+logname          = /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0
+lognum           = 007.0
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = --jobs=4
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 3
+max_unknown_uncertainty = 1
+mean_anyway      = 1
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 2
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = perlbench_r
+nansupport       = no
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+noratios         = 0
+note_preenv      = 1
+notes_plat_sysinfo_000 =  Sysinfo program /home/iiitd/Desktop/hw11/bin/sysinfo
+notes_plat_sysinfo_005 =  Rev: r5974 of 2018-05-19 9bcde8f2999c33d61f64985e45859ea9
+notes_plat_sysinfo_010 =  running on iiit-d Sat Apr  6 05:11:12 2019
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  SUT (System Under Test) info as seen by some common utilities.
+notes_plat_sysinfo_025 =  For more information on this section, see
+notes_plat_sysinfo_030 =     https://www.spec.org/cpu2017/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+notes_plat_sysinfo_050 =        1  "physical id"s (chips)
+notes_plat_sysinfo_055 =        4 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent. The following
+notes_plat_sysinfo_065 =     excerpts from /proc/cpuinfo might not be reliable.  Use with caution.)
+notes_plat_sysinfo_070 =        cpu cores : 4
+notes_plat_sysinfo_075 =        siblings  : 4
+notes_plat_sysinfo_080 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_085 = 
+notes_plat_sysinfo_090 =  From lscpu:
+notes_plat_sysinfo_095 =       Architecture:        x86_64
+notes_plat_sysinfo_100 =       CPU op-mode(s):      32-bit, 64-bit
+notes_plat_sysinfo_105 =       Byte Order:          Little Endian
+notes_plat_sysinfo_110 =       CPU(s):              4
+notes_plat_sysinfo_115 =       On-line CPU(s) list: 0-3
+notes_plat_sysinfo_120 =       Thread(s) per core:  1
+notes_plat_sysinfo_125 =       Core(s) per socket:  4
+notes_plat_sysinfo_130 =       Socket(s):           1
+notes_plat_sysinfo_135 =       NUMA node(s):        1
+notes_plat_sysinfo_140 =       Vendor ID:           GenuineIntel
+notes_plat_sysinfo_145 =       CPU family:          6
+notes_plat_sysinfo_150 =       Model:               158
+notes_plat_sysinfo_155 =       Model name:          Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+notes_plat_sysinfo_160 =       Stepping:            9
+notes_plat_sysinfo_165 =       CPU MHz:             3602.576
+notes_plat_sysinfo_170 =       CPU max MHz:         3800.0000
+notes_plat_sysinfo_175 =       CPU min MHz:         800.0000
+notes_plat_sysinfo_180 =       BogoMIPS:            6816.00
+notes_plat_sysinfo_185 =       Virtualization:      VT-x
+notes_plat_sysinfo_190 =       L1d cache:           32K
+notes_plat_sysinfo_195 =       L1i cache:           32K
+notes_plat_sysinfo_200 =       L2 cache:            256K
+notes_plat_sysinfo_205 =       L3 cache:            6144K
+notes_plat_sysinfo_210 =       NUMA node0 CPU(s):   0-3
+notes_plat_sysinfo_215 =       Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
+notes_plat_sysinfo_220 =       pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp
+notes_plat_sysinfo_225 =       lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid
+notes_plat_sysinfo_230 =       aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3
+notes_plat_sysinfo_235 =       sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer
+notes_plat_sysinfo_240 =       aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single
+notes_plat_sysinfo_245 =       pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust
+notes_plat_sysinfo_250 =       bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt
+notes_plat_sysinfo_255 =       xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window
+notes_plat_sysinfo_260 =       hwp_epp flush_l1d
+notes_plat_sysinfo_265 = 
+notes_plat_sysinfo_270 =  /proc/cpuinfo cache data
+notes_plat_sysinfo_275 =     cache size : 6144 KB
+notes_plat_sysinfo_280 = 
+notes_plat_sysinfo_285 =  From numactl --hardware  WARNING: a numactl 'node' might or might not correspond to a
+notes_plat_sysinfo_290 =  physical chip.
+notes_plat_sysinfo_295 = 
+notes_plat_sysinfo_300 =  From /proc/meminfo
+notes_plat_sysinfo_305 =     MemTotal:        8049856 kB
+notes_plat_sysinfo_310 =     HugePages_Total:     128
+notes_plat_sysinfo_315 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_320 = 
+notes_plat_sysinfo_325 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_330 =     Ubuntu 18.04.1 LTS
+notes_plat_sysinfo_335 = 
+notes_plat_sysinfo_340 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_345 =     debian_version: buster/sid
+notes_plat_sysinfo_350 =     os-release:
+notes_plat_sysinfo_355 =        NAME="Ubuntu"
+notes_plat_sysinfo_360 =        VERSION="18.04.1 LTS (Bionic Beaver)"
+notes_plat_sysinfo_365 =        ID=ubuntu
+notes_plat_sysinfo_370 =        ID_LIKE=debian
+notes_plat_sysinfo_375 =        PRETTY_NAME="Ubuntu 18.04.1 LTS"
+notes_plat_sysinfo_380 =        VERSION_ID="18.04"
+notes_plat_sysinfo_385 =        HOME_URL="https://www.ubuntu.com/"
+notes_plat_sysinfo_390 =        SUPPORT_URL="https://help.ubuntu.com/"
+notes_plat_sysinfo_395 = 
+notes_plat_sysinfo_400 =  uname -a:
+notes_plat_sysinfo_405 =     Linux iiit-d 4.15.0-46-generic \#49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019 x86_64
+notes_plat_sysinfo_410 =     x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_415 = 
+notes_plat_sysinfo_420 =  Kernel self-reported vulnerability status:
+notes_plat_sysinfo_425 = 
+notes_plat_sysinfo_430 =  CVE-2017-5754 (Meltdown):          Mitigation: PTI
+notes_plat_sysinfo_435 =  CVE-2017-5753 (Spectre variant 1): Mitigation: __user pointer sanitization
+notes_plat_sysinfo_440 =  CVE-2017-5715 (Spectre variant 2): Mitigation: Full generic retpoline, IBPB, IBRS_FW
+notes_plat_sysinfo_445 = 
+notes_plat_sysinfo_450 =  run-level 5 2019-04-05 19:29
+notes_plat_sysinfo_455 = 
+notes_plat_sysinfo_460 =  SPEC is set to: /home/iiitd/Desktop/hw11
+notes_plat_sysinfo_465 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_470 =     /dev/sda4      ext4  341G  140G  184G  44% /
+notes_plat_sysinfo_475 = 
+notes_plat_sysinfo_480 =  Additional information from dmidecode follows.  WARNING: Use caution when you interpret
+notes_plat_sysinfo_485 =  this section. The 'dmidecode' program reads system data which is "intended to allow
+notes_plat_sysinfo_490 =  hardware to be accurately determined", but the intent may not be met, as there are
+notes_plat_sysinfo_495 =  frequent changes to hardware, firmware, and the "DMTF SMBIOS" standard.
+notes_plat_sysinfo_500 = 
+notes_plat_sysinfo_505 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 500
+obiwan           = 
+oldhash          = 
+os_exe_ext       = 
+output_format    = txt,html,cfg,pdf,csv
+output_root      = 
+outputdir        = output
+parallel_test    = 1
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r
+plain_train      = 1
+platform         = 
+power            = 0
+preENV_LD_LIBRARY_PATH = /usr/lib/llvm-6.0/lib
+preENV_LIBRARY_PATH = /usr/lib/llvm-6.0/lib
+preENV_PATH      = /usr/lib/llvm-6.0/bin:%{ENV_PATH}
+preenv           = 0
+prefix           = 
+prepared_by      = iiitd  (is never output, only tags rawfile)
+ranks            = 1
+rawhash_bits     = 256
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+runcpu           = /home/iiitd/Desktop/hw11/bin/harness/runcpu --configfile clang --size test --copies 1 --noreportable --iterations 1 --noreportable --nopower --runmode rate --tune base:peak --size test 500.perlbench_r --nopreenv --note-preenv --logfile /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0 --lognum 007.0 --from_runcpu 2
+rundir           = run
+runmode          = rate
+safe_eval        = 1
+save_build_files = 
+section_specifier_fatal = 1
+setprocgroup     = 1
+setup_error      = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = peak
+specdiff         = specdiff
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+srcsource        = /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/src
+stagger          = 10
+strict_rundir_verify = 1
+submit_default   = echo "$command" > run.sh ; $BIND bash run.sh
+sw_avail         = 
+sw_base_ptrsize  = 64-bit
+sw_compiler001   = C/C++: Version 3.9.0 of Clang, the
+sw_compiler002   = LLVM Compiler Infrastructure
+sw_compiler003   = Fortran: Version 4.8.2 of GCC, the
+sw_compiler004   = GNU Compiler Collection
+sw_compiler005   = DragonEgg: Version 3.5.2, the
+sw_compiler006   = LLVM Compiler Infrastructure
+sw_file          = ext4
+sw_os001         = Ubuntu 18.04.1 LTS
+sw_os002         = 4.15.0-46-generic
+sw_other         = 
+sw_peak_ptrsize  = 64-bit
+sw_state         = Run level 5 (add definition here)
+sysinfo_hash_bits = 256
+sysinfo_program  = specperl /home/iiitd/Desktop/hw11/bin/sysinfo
+sysinfo_program_hash = sysinfo:SHA:32259ebd59f3e93740723202f27c44c82ee68e0f2e40cd2ca50cfd5519772397
+table            = 1
+teeout           = 0
+test_date        = Apr-2019
+test_sponsor     = My Corporation
+tester           = My Corporation
+threads          = 1
+top              = /home/iiitd/Desktop/hw11
+train_single_thread = 0
+train_with       = train
+tune             = peak
+uid              = 1000
+unbuffer         = 1
+uncertainty_exception = 5
+update           = 0
+update_url       = http://www.spec.org/auto/cpu2017/updates/
+use_submit_for_compare = 0
+use_submit_for_speed = 0
+username         = iiitd
+verbose          = 5
+verify_binaries  = 1
+version          = 0.906000
+version_url      = http://www.spec.org/auto/cpu2017/current_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.1.out suns.out validate
+  Compile for '500.perlbench_r' started at: 2019-04-06 05:11:44 (1554507704)
+Issuing make.clean command 'specmake --output-sync --jobs=4 clean'
+Start make.clean command: 2019-04-06 05:11:45 (1554507705.01232)
+rm -rf *.o  diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.1.out suns.out validate
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf perlbench_r
+rm -rf perlbench_r.exe
+rm -rf core
+Stop make.clean command: 2019-04-06 05:11:45 (1554507705.17819)
+Elapsed time for make.clean command: 00:00:00 (0.165875196456909)
+Issuing make command 'specmake --output-sync --jobs=4 build'
+Start make command: 2019-04-06 05:11:45 (1554507705.17917)
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o deb.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  deb.c
+In file included from deb.c:25:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o caretx.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  caretx.c
+In file included from caretx.c:32:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o av.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  av.c
+In file included from av.c:24:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o globals.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  globals.c
+In file included from globals.c:32:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o doio.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  doio.c
+In file included from doio.c:27:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o doop.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  doop.c
+In file included from doop.c:24:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dump.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dump.c
+In file included from dump.c:29:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o keywords.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  keywords.c
+In file included from keywords.c:9:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o locale.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  locale.c
+In file included from locale.c:37:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o hv.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  hv.c
+In file included from hv.c:35:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o numeric.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  numeric.c
+In file included from numeric.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o gv.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  gv.c
+In file included from gv.c:36:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o mg.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  mg.c
+In file included from mg.c:43:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perlapi.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perlapi.c
+In file included from perlapi.c:28:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pad.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pad.c
+In file included from pad.c:147:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perlmain.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perlmain.c
+In file included from perlmain.c:43:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perl.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perl.c
+In file included from perl.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perly.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perly.c
+In file included from perly.c:26:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o perlio.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  perlio.c
+In file included from perlio.c:43:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_hot.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_hot.c
+In file included from pp_hot.c:36:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp.c
+In file included from pp.c:28:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_ctl.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_ctl.c
+In file included from pp_ctl.c:35:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o op.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  op.c
+In file included from op.c:103:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_sort.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_sort.c
+In file included from pp_sort.c:31:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_sys.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_sys.c
+In file included from pp_sys.c:31:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o run.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  run.c
+In file included from run.c:26:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o scope.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  scope.c
+In file included from scope.c:27:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o pp_pack.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  pp_pack.c
+In file included from pp_pack.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o taint.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  taint.c
+In file included from taint.c:24:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o regexec.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  regexec.c
+In file included from regexec.c:78:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o sv.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  sv.c
+In file included from sv.c:32:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o universal.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  universal.c
+In file included from universal.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o utf8.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  utf8.c
+In file included from utf8.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o reentr.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  reentr.c
+In file included from reentr.c:33:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o util.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  util.c
+In file included from util.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o mro_core.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  mro_core.c
+In file included from mro_core.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o regcomp.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  regcomp.c
+In file included from regcomp.c:75:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o specrand/specrand.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  specrand/specrand.c
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o mathoms.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  mathoms.c
+In file included from mathoms.c:46:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/PathTools/Cwd.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/PathTools/Cwd.c
+In file included from dist/PathTools/Cwd.c:21:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Devel-Peek/Peek.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Devel-Peek/Peek.c
+In file included from ext/Devel-Peek/Peek.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Digest-MD5/MD5.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Digest-MD5/MD5.c
+In file included from cpan/Digest-MD5/MD5.c:52:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/Data-Dumper/Dumper.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/Data-Dumper/Dumper.c
+In file included from dist/Data-Dumper/Dumper.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o DynaLoader.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  DynaLoader.c
+In file included from DynaLoader.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/IO/poll.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/IO/poll.c
+In file included from dist/IO/poll.c:14:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/IO/IO.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/IO/IO.c
+In file included from dist/IO/IO.c:25:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/MIME-Base64/Base64.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/MIME-Base64/Base64.c
+In file included from cpan/MIME-Base64/Base64.c:42:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o Opcode.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  Opcode.c
+In file included from Opcode.c:15:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Sys-Hostname/Hostname.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Sys-Hostname/Hostname.c
+In file included from ext/Sys-Hostname/Hostname.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Time-HiRes/HiRes.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Time-HiRes/HiRes.c
+In file included from cpan/Time-HiRes/HiRes.c:31:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/XS-Typemap/stdio.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/XS-Typemap/stdio.c
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/attributes/attributes.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/attributes/attributes.c
+In file included from ext/attributes/attributes.c:30:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Digest-SHA/SHA.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Digest-SHA/SHA.c
+In file included from cpan/Digest-SHA/SHA.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/mro/mro.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/mro/mro.c
+In file included from ext/mro/mro.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/re/re.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/re/re.c
+In file included from ext/re/re.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o dist/Storable/Storable.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  dist/Storable/Storable.c
+In file included from dist/Storable/Storable.c:26:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/HTML-Parser/Parser.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/HTML-Parser/Parser.c
+In file included from cpan/HTML-Parser/Parser.c:35:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o toke.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  toke.c
+In file included from toke.c:40:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/arybase/arybase.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/arybase/arybase.c
+In file included from ext/arybase/arybase.c:17:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/PerlIO-scalar/scalar.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/PerlIO-scalar/scalar.c
+In file included from ext/PerlIO-scalar/scalar.c:16:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/PerlIO-via/via.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/PerlIO-via/via.c
+In file included from ext/PerlIO-via/via.c:15:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/File-Glob/bsd_glob.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/File-Glob/bsd_glob.c
+In file included from ext/File-Glob/bsd_glob.c:69:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/File-Glob/Glob.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/File-Glob/Glob.c
+In file included from ext/File-Glob/Glob.c:17:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Hash-Util/Util.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Hash-Util/Util.c
+In file included from ext/Hash-Util/Util.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Hash-Util-FieldHash/FieldHash.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Hash-Util-FieldHash/FieldHash.c
+In file included from ext/Hash-Util-FieldHash/FieldHash.c:13:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/Tie-Hash-NamedCapture/NamedCapture.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/Tie-Hash-NamedCapture/NamedCapture.c
+In file included from ext/Tie-Hash-NamedCapture/NamedCapture.c:15:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o cpan/Scalar-List-Utils/ListUtil.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  cpan/Scalar-List-Utils/ListUtil.c
+In file included from cpan/Scalar-List-Utils/ListUtil.c:21:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/re/re_exec.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/re/re_exec.c
+In file included from ext/re/re_exec.c:78:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64 -c -o ext/re/re_comp.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  ext/re/re_comp.c
+In file included from ext/re/re_comp.c:26:
+In file included from ext/re/../../regcomp.c:75:
+./perl.h:3621:9: warning: undefining builtin macro [-Wbuiltin-macro-redefined]
+# undef __has_builtin
+        ^
+1 warning generated.
+/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -Ofast -mavx    -DSPEC_LINUX_X64     av.o caretx.o deb.o doio.o doop.o dump.o globals.o gv.o hv.o keywords.o locale.o mg.o numeric.o op.o pad.o perl.o perlapi.o perlio.o perlmain.o perly.o pp.o pp_ctl.o pp_hot.o pp_pack.o pp_sort.o pp_sys.o regcomp.o regexec.o run.o scope.o sv.o taint.o toke.o universal.o utf8.o util.o reentr.o mro_core.o mathoms.o specrand/specrand.o dist/PathTools/Cwd.o dist/Data-Dumper/Dumper.o ext/Devel-Peek/Peek.o cpan/Digest-MD5/MD5.o cpan/Digest-SHA/SHA.o DynaLoader.o dist/IO/IO.o dist/IO/poll.o cpan/MIME-Base64/Base64.o Opcode.o dist/Storable/Storable.o ext/Sys-Hostname/Hostname.o cpan/Time-HiRes/HiRes.o ext/XS-Typemap/stdio.o ext/attributes/attributes.o cpan/HTML-Parser/Parser.o ext/mro/mro.o ext/re/re.o ext/re/re_comp.o ext/re/re_exec.o ext/arybase/arybase.o ext/PerlIO-scalar/scalar.o ext/PerlIO-via/via.o ext/File-Glob/bsd_glob.o ext/File-Glob/Glob.o ext/Hash-Util/Util.o ext/Hash-Util-FieldHash/FieldHash.o ext/Tie-Hash-NamedCaptur
+e/NamedCapture.o cpan/Scalar-List-Utils/ListUtil.o             -lm         -o perlbench_r  
+Stop make command: 2019-04-06 05:12:14 (1554507734.74307)
+Elapsed time for make command: 00:00:29 (29.5638978481293)
+Issuing options command 'specmake --output-sync --jobs=4 options'
+Start options command: 2019-04-06 05:12:14 (1554507734.74406)
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-Ofast -mavx"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -Ofast -mavx    -DSPEC_LINUX_X64     <objects>   -lm         -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-Ofast -mavx"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: 2019-04-06 05:12:14 (1554507734.90791)
+Elapsed time for options command: 00:00:00 (0.163854837417603)
+Issuing compiler-version command 'specmake --output-sync --jobs=4 compiler-version'
+Start compiler-version command: 2019-04-06 05:12:14 (1554507734.90908)
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D PERL_CORE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I dist/IO' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/Time-HiRes' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/HTML-Parser' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ext/re' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I specrand' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D DOUBLE_SLASHES_SPECIAL=0' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGE_FILES' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGEFILE_SOURCE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _FILE_OFFSET_BITS=64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-Ofast' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LINUX_X64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+Stop compiler-version command: 2019-04-06 05:12:15 (1554507735.08542)
+Elapsed time for compiler-version command: 00:00:00 (0.176344156265259)
+  Compile for '500.perlbench_r' ended at: 2019-04-06 05:12:15 (1554507735)
+  Elapsed compile for '500.perlbench_r': 00:00:31 (31)
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -Ofast -mavx       -DSPEC_LINUX_X64       -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-Ofast -mavx"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -Ofast -mavx    -DSPEC_LINUX_X64     <objects>   -lm         -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-Ofast -mavx"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D PERL_CORE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I dist/IO' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/Time-HiRes' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I cpan/HTML-Parser' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ext/re' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I specrand' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D DOUBLE_SLASHES_SPECIAL=0' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGE_FILES' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _LARGEFILE_SOURCE' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D _FILE_OFFSET_BITS=64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-Ofast' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LINUX_X64' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+
+Build successes for intrate: 500.perlbench_r(base), 500.perlbench_r(peak)
+Build errors for intrate: None
+
+Setting Up Run Directories
+  Setting up 500.perlbench_r test base test1-m64 (1 copy): run_base_test_test1-m64.0000
+  Setting up 500.perlbench_r test peak test1-m64 (1 copy): run_peak_test_test1-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 500.perlbench_r test base test1-m64 (1 copy) [2019-04-06 05:12:17]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -b numactl -m 0 --physcpubind=0
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_test1-m64.0000
+    -o makerand.out -e makerand.err echo "../run_base_test_test1-m64.0000/perlbench_r_base.test1-m64 -I. -I./lib makerand.pl" > run.sh ; $BIND bash run.sh (timed)
+    -o test.out -e test.err echo "../run_base_test_test1-m64.0000/perlbench_r_base.test1-m64 -I. -I./lib test.pl" > run.sh ; $BIND bash run.sh (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 05:12:17 (1554507737.75368)
+Stop command: 2019-04-06 05:12:17 (1554507737.91155)
+Elapsed time for command: 00:00:00 (0.157863140106201)
+500.perlbench_r: copy 0 non-zero return code (exit code=127, signal=0)
+
+****************************************
+Contents of makerand.err
+****************************************
+/bin/sh: 1: numactl: not found
+
+****************************************
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: LESSOPEN=| /usr/bin/lesspipe %s
+ # 2: J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+ # 3: LESSCLOSE=/usr/bin/lesspipe %s %s
+ # 4: SPEC=/home/iiitd/Desktop/hw11
+ # 5: PWD=/home/iiitd/Desktop/hw11/bin
+ # 6: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ # 7: SPECDB_PWD=/home/iiitd/Desktop/hw11/bin
+ # 8: HOME=/home/iiitd
+ # 9: SHELL=/bin/bash
+ #10: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ #11: LANGUAGE=en_IN:en
+ #12: TERM=xterm-256color
+ #13: SSH_CONNECTION=192.168.1.99 53924 192.168.32.210 22
+ #14: XDG_RUNTIME_DIR=/run/user/1000
+ #15: LD_LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #16: SSH_CLIENT=192.168.1.99 53924 22
+ #17: SSH_TTY=/dev/pts/1
+ #18: _=./runcpu
+ #19: MAIL=/var/mail/iiitd
+ #20: LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #21: J2SDKDIR=/usr/lib/jvm/java-8-oracle
+ #22: PATH=/usr/lib/llvm-6.0/bin:/home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+ #23: LOGNAME=iiitd
+ #24: LIBC_FATAL_STDERR_=1
+ #25: OLDPWD=/home/iiitd/Desktop/hw11/config
+ #26: USER=iiitd
+ #27: DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+ #28: LANG=en_IN
+ #29: XDG_SESSION_ID=19
+ #30: XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ #31: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mk
+v=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+ #32: SHLVL=1
+ #33: OMP_NUM_THREADS=1
+ #34: OMP_THREAD_LIMIT=1
+running commands in speccmds.cmd 1 times
+runs started at		1554507737, 758037000, Sat Apr  6 05:12:17 2019
+run 1 started at	1554507737, 758059000, Sat Apr  6 05:12:17 2019
+child started: 0,	1554507737, 758067000, pid=15523, 'echo "../run_base_test_test1-m64.0000/perlbench_r_base.test1-m64 -I. -I./lib makerand.pl" > run.sh ; numactl -m 0 --physcpubind=0 bash run.sh'
+child finished: 0,	1554507737, 758641000, sec=0, nsec=574000, pid=15523, rc=32512
+run 1 finished at:	1554507737, 758654000, Sat Apr  6 05:12:17 2019
+run 1 elapsed time:	         0, 000595000, 0.000595000
+runs finished at	1554507737, 758670000, Sat Apr  6 05:12:17 2019
+runs elapsed time:	         0, 000633000, 0.000633000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+Workload elapsed time (copy 0 workload 1) = 0.000574 seconds
+Copy 0 of 500.perlbench_r (base test) run 1 finished at 2019-04-06 05:12:17.  Total elapsed time: 0.000574
+Benchmark Times:
+  Run Start:    2019-04-06 05:12:17 (1554507737)
+  Rate Start:   2019-04-06 05:12:17 (1554507737.75807)
+  Rate End:     2019-04-06 05:12:17 (1554507737.75864)
+  Run Stop:     2019-04-06 05:12:17 (1554507737)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 574111 0.000574)
+ Error 500.perlbench_r base test ratio=-0.00, runtime=0.000574, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%, errorcode=RE
+-----------------------------------
+  Running 500.perlbench_r test peak test1-m64 (1 copy) [2019-04-06 05:12:18]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -b numactl -m 0 --physcpubind=0
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_peak_test_test1-m64.0000
+    -o makerand.out -e makerand.err echo "../run_peak_test_test1-m64.0000/perlbench_r_peak.test1-m64 -I. -I./lib makerand.pl" > run.sh ; $BIND bash run.sh (timed)
+    -o test.out -e test.err echo "../run_peak_test_test1-m64.0000/perlbench_r_peak.test1-m64 -I. -I./lib test.pl" > run.sh ; $BIND bash run.sh (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 05:12:18 (1554507738.35185)
+Stop command: 2019-04-06 05:12:18 (1554507738.50988)
+Elapsed time for command: 00:00:00 (0.158030033111572)
+500.perlbench_r: copy 0 non-zero return code (exit code=127, signal=0)
+
+****************************************
+Contents of makerand.err
+****************************************
+/bin/sh: 1: numactl: not found
+
+****************************************
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: USER=iiitd
+ # 2: LIBC_FATAL_STDERR_=1
+ # 3: OLDPWD=/home/iiitd/Desktop/hw11/config
+ # 4: DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+ # 5: LANG=en_IN
+ # 6: _=./runcpu
+ # 7: MAIL=/var/mail/iiitd
+ # 8: LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ # 9: LOGNAME=iiitd
+ #10: PATH=/usr/lib/llvm-6.0/bin:/home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+ #11: J2SDKDIR=/usr/lib/jvm/java-8-oracle
+ #12: SHLVL=1
+ #13: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mk
+v=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+ #14: XDG_SESSION_ID=19
+ #15: XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ #16: SHELL=/bin/bash
+ #17: LANGUAGE=en_IN:en
+ #18: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ #19: TERM=xterm-256color
+ #20: PWD=/home/iiitd/Desktop/hw11/bin
+ #21: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ #22: LESSOPEN=| /usr/bin/lesspipe %s
+ #23: J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+ #24: LESSCLOSE=/usr/bin/lesspipe %s %s
+ #25: SPEC=/home/iiitd/Desktop/hw11
+ #26: SPECDB_PWD=/home/iiitd/Desktop/hw11/bin
+ #27: HOME=/home/iiitd
+ #28: XDG_RUNTIME_DIR=/run/user/1000
+ #29: LD_LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #30: SSH_CLIENT=192.168.1.99 53924 22
+ #31: SSH_TTY=/dev/pts/1
+ #32: SSH_CONNECTION=192.168.1.99 53924 192.168.32.210 22
+ #33: OMP_NUM_THREADS=1
+ #34: OMP_THREAD_LIMIT=1
+running commands in speccmds.cmd 1 times
+runs started at		1554507738, 356350000, Sat Apr  6 05:12:18 2019
+run 1 started at	1554507738, 356370000, Sat Apr  6 05:12:18 2019
+child started: 0,	1554507738, 356378000, pid=15531, 'echo "../run_peak_test_test1-m64.0000/perlbench_r_peak.test1-m64 -I. -I./lib makerand.pl" > run.sh ; numactl -m 0 --physcpubind=0 bash run.sh'
+child finished: 0,	1554507738, 356952000, sec=0, nsec=574000, pid=15531, rc=32512
+run 1 finished at:	1554507738, 356964000, Sat Apr  6 05:12:18 2019
+run 1 elapsed time:	         0, 000594000, 0.000594000
+runs finished at	1554507738, 356980000, Sat Apr  6 05:12:18 2019
+runs elapsed time:	         0, 000630000, 0.000630000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+Workload elapsed time (copy 0 workload 1) = 0.000574 seconds
+Copy 0 of 500.perlbench_r (peak test) run 1 finished at 2019-04-06 05:12:18.  Total elapsed time: 0.000574
+Benchmark Times:
+  Run Start:    2019-04-06 05:12:18 (1554507738)
+  Rate Start:   2019-04-06 05:12:18 (1554507738.35638)
+  Rate End:     2019-04-06 05:12:18 (1554507738.35695)
+  Run Stop:     2019-04-06 05:12:18 (1554507738)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 573873 0.000574)
+ Error 500.perlbench_r peak test ratio=-0.00, runtime=0.000574, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%, errorcode=RE
+Error: 2x500.perlbench_r
+Producing Raw Reports
+ label: test1-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base, SPECrate2017_int_peak
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.rsf
+Parsing flags for 500.perlbench_r base: done
+Parsing flags for 500.perlbench_r peak: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.csv
+    format: PDF -> 
+A line in your General Notes section is too long!
+
+/home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 05:12:23; 71 total seconds elapsed
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.007.log
+
+runcpu finished at 2019-04-06 05:12:23; 72 total seconds elapsed

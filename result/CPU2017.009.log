@@ -1,0 +1,354 @@
+runcpu v5825 started at 2019-04-06 05:18:24 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=clang --size=test --copies=1 --noreportable --iterations=1 502.gcc_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/clang.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   502.gcc_r                  
+-------------------------------------------------------------------------------
+
+Setting up environment for running 502.gcc_r...
+Starting runcpu for 502.gcc_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/clang.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base,peak
+Label     = test1-m64
+Size      = test
+benchmarks= 502.gcc_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "/usr/lib/llvm-6.0/lib"
+LIBRARY_PATH = "/usr/lib/llvm-6.0/lib"
+PATH = "/usr/lib/llvm-6.0/bin:%{ENV_PATH}"
+
+Benchmarks selected: 502.gcc_r
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -I. -I./include -I./spec_qsort -DSPEC_502 -DSPEC_AUTO_SUPPRESS_OPENMP -DIN_GCC -DHAVE_CONFIG_H   -O3 -mavx              -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./include -I./spec_qsort -DSPEC_502 -DSPEC_AUTO_SUPPRESS_OPENMP -DIN_GCC -DHAVE_CONFIG_H"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -mavx"
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -O3 -mavx   -z muldefs      <objects>   -lm         -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-O3 -mavx"
+O: LDOPTIMIZE="-z muldefs"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ./include' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ./spec_qsort' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_502' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D IN_GCC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D HAVE_CONFIG_H' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-O3' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+  Up to date 502.gcc_r base test1-m64
+------------------------------------------------------------------------
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -I. -I./include -I./spec_qsort -DSPEC_502 -DSPEC_AUTO_SUPPRESS_OPENMP -DIN_GCC -DHAVE_CONFIG_H   -Ofast -mavx              -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./include -I./spec_qsort -DSPEC_502 -DSPEC_AUTO_SUPPRESS_OPENMP -DIN_GCC -DHAVE_CONFIG_H"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-Ofast -mavx"
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -Ofast -mavx   -z muldefs      <objects>   -lm         -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-Ofast -mavx"
+O: LDOPTIMIZE="-z muldefs"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ./include' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I ./spec_qsort' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_502' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D IN_GCC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D HAVE_CONFIG_H' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-Ofast' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+  Up to date 502.gcc_r peak test1-m64
+
+
+Setting Up Run Directories
+  Setting up 502.gcc_r test base test1-m64 (1 copy): run_base_test_test1-m64.0000
+  Setting up 502.gcc_r test peak test1-m64 (1 copy): run_peak_test_test1-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 502.gcc_r test base test1-m64 (1 copy) [2019-04-06 05:18:27]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -b numactl -m 0 --physcpubind=0
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_test1-m64.0000
+    -o t1.opts-O3_-finline-limit_50000.out -e t1.opts-O3_-finline-limit_50000.err echo "../run_base_test_test1-m64.0000/cpugcc_r_base.test1-m64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s" > run.sh ; $BIND bash run.sh (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 05:18:27 (1554508107.54091)
+Stop command: 2019-04-06 05:18:27 (1554508107.69876)
+Elapsed time for command: 00:00:00 (0.157846927642822)
+502.gcc_r: copy 0 non-zero return code (exit code=127, signal=0)
+
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: XDG_RUNTIME_DIR=/run/user/1000
+ # 2: PATH=/usr/lib/llvm-6.0/bin:/home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+ # 3: XDG_SESSION_ID=19
+ # 4: SPEC=/home/iiitd/Desktop/hw11
+ # 5: HOME=/home/iiitd
+ # 6: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mk
+v=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+ # 7: LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ # 8: DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+ # 9: _=./runcpu
+ #10: LIBC_FATAL_STDERR_=1
+ #11: SSH_CLIENT=192.168.1.99 53924 22
+ #12: LD_LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #13: LOGNAME=iiitd
+ #14: SPECDB_PWD=/home/iiitd/Desktop/hw11/bin
+ #15: SHLVL=1
+ #16: PWD=/home/iiitd/Desktop/hw11/bin
+ #17: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ #18: LANGUAGE=en_IN:en
+ #19: LESSCLOSE=/usr/bin/lesspipe %s %s
+ #20: SSH_CONNECTION=192.168.1.99 53924 192.168.32.210 22
+ #21: USER=iiitd
+ #22: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ #23: J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+ #24: OLDPWD=/home/iiitd/Desktop/hw11/config
+ #25: LANG=en_IN
+ #26: MAIL=/var/mail/iiitd
+ #27: SHELL=/bin/bash
+ #28: SSH_TTY=/dev/pts/1
+ #29: LESSOPEN=| /usr/bin/lesspipe %s
+ #30: TERM=xterm-256color
+ #31: XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ #32: J2SDKDIR=/usr/lib/jvm/java-8-oracle
+ #33: OMP_NUM_THREADS=1
+ #34: OMP_THREAD_LIMIT=1
+running commands in speccmds.cmd 1 times
+runs started at		1554508107, 545492000, Sat Apr  6 05:18:27 2019
+run 1 started at	1554508107, 545514000, Sat Apr  6 05:18:27 2019
+child started: 0,	1554508107, 545522000, pid=17550, 'echo "../run_base_test_test1-m64.0000/cpugcc_r_base.test1-m64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s" > run.sh ; numactl -m 0 --physcpubind=0 bash run.sh'
+child finished: 0,	1554508107, 546077000, sec=0, nsec=555000, pid=17550, rc=32512
+run 1 finished at:	1554508107, 546089000, Sat Apr  6 05:18:27 2019
+run 1 elapsed time:	         0, 000575000, 0.000575000
+runs finished at	1554508107, 546104000, Sat Apr  6 05:18:27 2019
+runs elapsed time:	         0, 000612000, 0.000612000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+****************************************
+Contents of t1.opts-O3_-finline-limit_50000.err
+****************************************
+/bin/sh: 1: numactl: not found
+
+****************************************
+Workload elapsed time (copy 0 workload 1) = 0.000555 seconds
+Copy 0 of 502.gcc_r (base test) run 1 finished at 2019-04-06 05:18:27.  Total elapsed time: 0.000555
+Benchmark Times:
+  Run Start:    2019-04-06 05:18:27 (1554508107)
+  Rate Start:   2019-04-06 05:18:27 (1554508107.54552)
+  Rate End:     2019-04-06 05:18:27 (1554508107.54608)
+  Run Stop:     2019-04-06 05:18:27 (1554508107)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 555038 0.000555)
+ Error 502.gcc_r base test ratio=-0.00, runtime=0.000555, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%, errorcode=RE
+-----------------------------------
+  Running 502.gcc_r test peak test1-m64 (1 copy) [2019-04-06 05:18:27]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -b numactl -m 0 --physcpubind=0
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_peak_test_test1-m64.0000
+    -o t1.opts-O3_-finline-limit_50000.out -e t1.opts-O3_-finline-limit_50000.err echo "../run_peak_test_test1-m64.0000/cpugcc_r_peak.test1-m64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s" > run.sh ; $BIND bash run.sh (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 05:18:27 (1554508107.8875)
+Stop command: 2019-04-06 05:18:28 (1554508108.04535)
+Elapsed time for command: 00:00:00 (0.157850980758667)
+502.gcc_r: copy 0 non-zero return code (exit code=127, signal=0)
+
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: XDG_SESSION_ID=19
+ # 2: HOME=/home/iiitd
+ # 3: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mk
+v=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+ # 4: SPEC=/home/iiitd/Desktop/hw11
+ # 5: PATH=/usr/lib/llvm-6.0/bin:/home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+ # 6: XDG_RUNTIME_DIR=/run/user/1000
+ # 7: SSH_CLIENT=192.168.1.99 53924 22
+ # 8: LIBC_FATAL_STDERR_=1
+ # 9: _=./runcpu
+ #10: LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #11: DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+ #12: LANG=en_IN
+ #13: J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+ #14: OLDPWD=/home/iiitd/Desktop/hw11/config
+ #15: MAIL=/var/mail/iiitd
+ #16: USER=iiitd
+ #17: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ #18: LESSCLOSE=/usr/bin/lesspipe %s %s
+ #19: PWD=/home/iiitd/Desktop/hw11/bin
+ #20: SHLVL=1
+ #21: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ #22: LANGUAGE=en_IN:en
+ #23: SSH_CONNECTION=192.168.1.99 53924 192.168.32.210 22
+ #24: LD_LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #25: LOGNAME=iiitd
+ #26: SPECDB_PWD=/home/iiitd/Desktop/hw11/bin
+ #27: J2SDKDIR=/usr/lib/jvm/java-8-oracle
+ #28: XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ #29: TERM=xterm-256color
+ #30: SSH_TTY=/dev/pts/1
+ #31: LESSOPEN=| /usr/bin/lesspipe %s
+ #32: SHELL=/bin/bash
+ #33: OMP_NUM_THREADS=1
+ #34: OMP_THREAD_LIMIT=1
+running commands in speccmds.cmd 1 times
+runs started at		1554508107, 891914000, Sat Apr  6 05:18:27 2019
+run 1 started at	1554508107, 891937000, Sat Apr  6 05:18:27 2019
+child started: 0,	1554508107, 891945000, pid=17558, 'echo "../run_peak_test_test1-m64.0000/cpugcc_r_peak.test1-m64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s" > run.sh ; numactl -m 0 --physcpubind=0 bash run.sh'
+child finished: 0,	1554508107, 892522000, sec=0, nsec=577000, pid=17558, rc=32512
+run 1 finished at:	1554508107, 892535000, Sat Apr  6 05:18:27 2019
+run 1 elapsed time:	         0, 000598000, 0.000598000
+runs finished at	1554508107, 892553000, Sat Apr  6 05:18:27 2019
+runs elapsed time:	         0, 000639000, 0.000639000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+****************************************
+Contents of t1.opts-O3_-finline-limit_50000.err
+****************************************
+/bin/sh: 1: numactl: not found
+
+****************************************
+Workload elapsed time (copy 0 workload 1) = 0.000577 seconds
+Copy 0 of 502.gcc_r (peak test) run 1 finished at 2019-04-06 05:18:27.  Total elapsed time: 0.000577
+Benchmark Times:
+  Run Start:    2019-04-06 05:18:27 (1554508107)
+  Rate Start:   2019-04-06 05:18:27 (1554508107.89194)
+  Rate End:     2019-04-06 05:18:27 (1554508107.89252)
+  Run Stop:     2019-04-06 05:18:28 (1554508108)
+  Run Elapsed:  00:00:01 (1)
+  Run Reported: 00:00:00 (0 577211 0.000577)
+ Error 502.gcc_r peak test ratio=-0.00, runtime=0.000577, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%, errorcode=RE
+Error: 2x502.gcc_r
+Producing Raw Reports
+ label: test1-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base, SPECrate2017_int_peak
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.rsf
+Parsing flags for 502.gcc_r base: done
+Parsing flags for 502.gcc_r peak: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.csv
+    format: PDF -> 
+A line in your General Notes section is too long!
+
+/home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.009.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 05:18:34; 9 total seconds elapsed
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.009.log
+
+runcpu finished at 2019-04-06 05:18:34; 10 total seconds elapsed
