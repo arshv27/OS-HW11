@@ -283,7 +283,7 @@ default:# data model applies to all benchmarks
 
 #--------  Baseline Tuning Flags ----------------------------------------------
 default=base:
-    COPTIMIZE     = -O3 -mavx -Wall -pg
+    COPTIMIZE     = -O3 -mavx
     CXXOPTIMIZE   = -O3 -mavx
     FOPTIMIZE     = -O3 -mavx -funroll-loops
     EXTRA_FFLAGS  = -fplugin=$(DRAGONEGG_PATH)/dragonegg.so
@@ -758,61 +758,4 @@ qARutNqZ3m9dx18AP8uWZ2hruXR1T5lYuidSu44xiM/SLwStuamdyj5UVzj276TZ4JXz3wn/xgmu\
 Q0elmAij8Ac2s7bOGJRgNBFoFZJQfLdSjUYZqjgTCZLvctjRBYb59byfwbimrvzTljdq87Msen0L\
 JuvNVwAMtiPBeQ79676HM2h6tPXE0y+z2ZCR
 exehash=97a40993e0d105c08abe3c52e14a305927e40b36c90d1b151b77d51a611782fc
-
-531.deepsjeng_r=peak=test1-m64:
-# Last updated 2019-04-06 05:31:25
-opthash=dd578dfc17bbdbe07aecdd2bd929e5dadee9bea6fdc6a119235f8b9c372f7d79
-baggage=
-compiler_version=\
-@eNqlkcFKxDAQhu95ijnqIUlXl7rUixKrLIgr2yJ7K2kSY2CaLk2y9PENKKvgzZ7mMPN/3wwD4nAQ\
-3Vu9b7a7l2732uZSEYXSWziZKbjRQ8kKVtBV6pOP6QouorSB7+vn+r6pu7Io+LvzEi9JKydrYgXz\
-puzKNT0qis6nmVqfSPsxGalhGLXBCo5jcDPZ+hAlotEPbqqApzBxdD1HPA00O3nvPHkck9egpNdO\
-y2jgSQhwXzkZ83K/clYp/q0+e/nNcgK7ZsViymY5IX9hRRqDRkWj/3mGOOuHhNHl6QrY7d1Qrn/I\
-fzqfIaK2HQ==
-compile_options=\
-@eNqNkF9vgjAUxd/7KW76aiouMyYzYgLYObZCG/4kupdGGS7dEBZAs317K4Ooe1i4L21zT++55+cX\
-OdlvPtOdylIovmpV5NUUVXWpklqWh/xNlfKYlmr3Y+I7jPS10hITj4YPozFGyOGemAI2DlVpZGpr\
-ZNlxTybDkbFVuZFkm/x9MACyn4yBJECKzmJYAFmEgjr68BfUjpfnt2cxJj3q8WDdtqUVR1yGsRAB\
-DUPJBfU9AQCE3+upm+M3tNXKmdBOMKuKQ5mkc4ycKTirldljv07L7WcuIhPfrIuRDumI+JFZy1D3\
-bldvujb1nSd5EfTMghH/tRWR67mvVP/tojVj6SoKLCl4EFm2y9xo3bk3UTFirv/Sj3/L6S84mBXb\
-jzSpqzlc1SU6QEOGLfpB/CdNM4XHZ7ZXYE9Rd7U6
-exehash=1615868b270a26899730e65bbf113c12aeb2e11ecf5564d3c9682a9946a203b3
-
-541.leela_r=peak=test1-m64:
-# Last updated 2019-04-06 05:31:33
-opthash=3f493fb0b5d6f27e4140397d2d2ce1362dceb8b5267efa58182d5832cfd823a4
-baggage=
-compiler_version=\
-@eNqlkcFKxDAQhu95ijnqIUlXl7rUixKrLIgr2yJ7K2kSY2CaLk2y9PENKKvgzZ7mMPN/3wwD4nAQ\
-3Vu9b7a7l2732uZSEYXSWziZKbjRQ8kKVtBV6pOP6QouorSB7+vn+r6pu7Io+LvzEi9JKydrYgXz\
-puzKNT0qis6nmVqfSPsxGalhGLXBCo5jcDPZ+hAlotEPbqqApzBxdD1HPA00O3nvPHkck9egpNdO\
-y2jgSQhwXzkZ83K/clYp/q0+e/nNcgK7ZsViymY5IX9hRRqDRkWj/3mGOOuHhNHl6QrY7d1Qrn/I\
-fzqfIaK2HQ==
-compile_options=\
-@eNqNkF9PgzAUxd/7KW76uhRm1CUuYwmwOlFGG/4k6EvDkJkqowbY4r69FSFuPiy7L216T8+95xeo\
-imyzj2IjywLUZytV1UxR09Yyb0W9q15lLfZFLTcHC19hpK+Nllh4bNyNbzFCLlvxKWBz19RmKddm\
-We63ZGKMzbWszLzMqrfRCMh2cgMkB6KGEYYCsog4dfURLKiTLIF4Rv8m7CRmIko4D2kUCcZpsOIA\
-QNi1tsr2X9BXL/e5todZo3Z1Xswxcqfgpql1wVKDljmPjMcWPtkRI53M5cm9by8j3Tvdt+s6NHAf\
-xCA4HwAj9juLx97Ke6H6w5Cn86JpHNqCszC2Hc/34udhZJcPI98Lni4j3cP5Twtmav1e5G0zh6P6\
-ywvQ4fAXl5E7k6ZzYckP0COa34zArj8=
-exehash=8a8165ee2b0504a40bc04932de729766ff9413c27064dfd7111152328b780316
-
-999.specrand_ir=peak=test1-m64:
-# Last updated 2019-04-06 05:31:35
-opthash=e4a8f0e7d934d41d9717da5c83534651b228204de8524e1d1cd73e39ce1f42b0
-baggage=
-compiler_version=\
-@eNqlkU1LxDAQhu/5FXN0D/lYXeoSL0qssiCubIvXkibZGpimS5os/fkWlFXwZk9zmHmfZ4YBpZr3\
-8lDt9q/N/q2eiyQGdejg7OLohwAFE0zQdW5zSPkarpLuRn4oX8qHqmwKIfjRB40rUuvYuSRh2hZN\
-saEnQ9GHPNEuZFJ/RKct9IN1KOE0jH4iuzAmjejso48SeB4jR99yxHNPZydvfSBPQw4WjA7WW50c\
-PCsF/iun07zcr1xnDP9WX7z8djmB3TCxmLJdTpi/sCaVQ2eSs/88Q130fcbk52kJ7O6+LzY/5D+d\
-T6m0tW0=
-compile_options=\
-@eNqNkFFPgzAUhd/7K2763jGjWeIylowOJ8pos7FEfSGMgalCu1BY1F9vB2EZxuj6cpvcc+895wuU\
-JEX8nmYiT0HtK6GkHiNdlSKporKWO1FGh7QU2aeNrzAyX20kNh4ObofXGCHKlnwM2Kp1aeVia+X5\
-oSCjwdDaCmkleSxfgRSjGyAJENUdGCgg8zV3qSnB3HU2CyCe3qdJGcsdSVRRKAkAhGWxrsx8fPiA\
-3munI5+bzTDRqi6TdIoRHQOl9r9mWiFzHhgPbdxzhpFJQ/nmzp8t1qbXd9l0HTeg91En+GkbI3bc\
-zUNv6b24RnCWoRl3n8LVLOJsFc4cz/fC5+5KkwYj3wseLwEK5AuKOt+lmW6R/AZrorZvaVLpaQ/e\
-KS1Ag8KfX8KMHYW0y306/nfgZjvbHDGfMf4GN4O22g==
-exehash=1a00252cd449491ebbc1682ef617680c39d6126e84346aafd0ab3baf66cc3db6
 

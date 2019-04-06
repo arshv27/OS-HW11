@@ -283,7 +283,7 @@ default:# data model applies to all benchmarks
 
 #--------  Baseline Tuning Flags ----------------------------------------------
 default=base:
-    COPTIMIZE     = -O3 -mavx -Wall -pg
+    COPTIMIZE     = -O3 -mavx
     CXXOPTIMIZE   = -O3 -mavx
     FOPTIMIZE     = -O3 -mavx -funroll-loops
     EXTRA_FFLAGS  = -fplugin=$(DRAGONEGG_PATH)/dragonegg.so
@@ -796,23 +796,4 @@ QNi1tsr2X9BXL/e5todZo3Z1Xswxcqfgpql1wVKDljmPjMcWPtkRI53M5cm9by8j3Tvdt+s6NHAf\
 xCA4HwAj9juLx97Ke6H6w5Cn86JpHNqCszC2Hc/34udhZJcPI98Lni4j3cP5Twtmav1e5G0zh6P6\
 ywvQ4fAXl5E7k6ZzYckP0COa34zArj8=
 exehash=8a8165ee2b0504a40bc04932de729766ff9413c27064dfd7111152328b780316
-
-999.specrand_ir=peak=test1-m64:
-# Last updated 2019-04-06 05:31:35
-opthash=e4a8f0e7d934d41d9717da5c83534651b228204de8524e1d1cd73e39ce1f42b0
-baggage=
-compiler_version=\
-@eNqlkU1LxDAQhu/5FXN0D/lYXeoSL0qssiCubIvXkibZGpimS5os/fkWlFXwZk9zmHmfZ4YBpZr3\
-8lDt9q/N/q2eiyQGdejg7OLohwAFE0zQdW5zSPkarpLuRn4oX8qHqmwKIfjRB40rUuvYuSRh2hZN\
-saEnQ9GHPNEuZFJ/RKct9IN1KOE0jH4iuzAmjejso48SeB4jR99yxHNPZydvfSBPQw4WjA7WW50c\
-PCsF/iun07zcr1xnDP9WX7z8djmB3TCxmLJdTpi/sCaVQ2eSs/88Q130fcbk52kJ7O6+LzY/5D+d\
-T6m0tW0=
-compile_options=\
-@eNqNkFFPgzAUhd/7K2763jGjWeIylowOJ8pos7FEfSGMgalCu1BY1F9vB2EZxuj6cpvcc+895wuU\
-JEX8nmYiT0HtK6GkHiNdlSKporKWO1FGh7QU2aeNrzAyX20kNh4ObofXGCHKlnwM2Kp1aeVia+X5\
-oSCjwdDaCmkleSxfgRSjGyAJENUdGCgg8zV3qSnB3HU2CyCe3qdJGcsdSVRRKAkAhGWxrsx8fPiA\
-3munI5+bzTDRqi6TdIoRHQOl9r9mWiFzHhgPbdxzhpFJQ/nmzp8t1qbXd9l0HTeg91En+GkbI3bc\
-zUNv6b24RnCWoRl3n8LVLOJsFc4cz/fC5+5KkwYj3wseLwEK5AuKOt+lmW6R/AZrorZvaVLpaQ/e\
-KS1Ag8KfX8KMHYW0y306/nfgZjvbHDGfMf4GN4O22g==
-exehash=1a00252cd449491ebbc1682ef617680c39d6126e84346aafd0ab3baf66cc3db6
 
