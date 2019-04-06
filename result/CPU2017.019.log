@@ -1,0 +1,399 @@
+runcpu v5825 started at 2019-04-06 20:08:28 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=clang --size=test --copies=1 --noreportable --iterations=1 557.xz_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/clang.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   557.xz_r                   
+-------------------------------------------------------------------------------
+
+Setting up environment for running 557.xz_r...
+Starting runcpu for 557.xz_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Read 112 info lines from the sysinfo program.
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/clang.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base,peak
+Label     = test1-m64
+Size      = test
+benchmarks= 557.xz_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "/usr/lib/llvm-6.0/lib"
+LIBRARY_PATH = "/usr/lib/llvm-6.0/lib"
+PATH = "/usr/lib/llvm-6.0/bin:%{ENV_PATH}"
+
+Benchmarks selected: 557.xz_r
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder   -O3 -mavx -Wall -pg              -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -mavx -Wall -pg"
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -O3 -mavx -Wall -pg   -z muldefs      <objects>            -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-O3 -mavx -Wall -pg"
+O: LDOPTIMIZE="-z muldefs"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_BYTEORDER=0x12345678' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D HAVE_CONFIG_H=1' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_MEM_IO' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_XZ' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I spec_mem_io' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I sha-2' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I common' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/api' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/lzma' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/common' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/check' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/simple' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/delta' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/lz' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/rangecoder' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-O3' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-Wall' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-pg' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+  Up to date 557.xz_r base test1-m64
+------------------------------------------------------------------------
+COMP: "/usr/lib/llvm-6.0/bin/clang -m64 -c -o options.o -DSPEC -DNDEBUG -DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder   -Ofast -mavx              -DSPEC_LP64  <source>"
+C: CC="/usr/lib/llvm-6.0/bin/clang -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-Ofast -mavx"
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/lib/llvm-6.0/bin/clang -m64  -z muldefs     -Ofast -mavx         <objects>            -o options  "
+C: LD="/usr/lib/llvm-6.0/bin/clang -m64"
+O: LDCFLAGS="-z muldefs"
+O: COPTIMIZE="-Ofast -mavx"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-6.0/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8.0.1
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang: warning: argument unused during compilation: '-D SPEC' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D NDEBUG' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_BYTEORDER=0x12345678' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D HAVE_CONFIG_H=1' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_MEM_IO' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_XZ' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_AUTO_SUPPRESS_OPENMP' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I .' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I spec_mem_io' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I sha-2' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I common' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/api' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/lzma' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/common' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/check' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/simple' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/delta' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/lz' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-I liblzma/rangecoder' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-Ofast' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mavx' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-D SPEC_LP64' [-Wunused-command-line-argument]
+  Up to date 557.xz_r peak test1-m64
+
+
+Setting Up Run Directories
+  Setting up 557.xz_r test base test1-m64 (1 copy): run_base_test_test1-m64.0000
+  Setting up 557.xz_r test peak test1-m64 (1 copy): run_peak_test_test1-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 557.xz_r test base test1-m64 (1 copy) [2019-04-06 20:08:31]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -b numactl -m 0 --physcpubind=0
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_test1-m64.0000
+    -o cpu2006docs.tar-4-0.out -e cpu2006docs.tar-4-0.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-1.out -e cpu2006docs.tar-4-1.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-2.out -e cpu2006docs.tar-4-2.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-3e.out -e cpu2006docs.tar-4-3e.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-4.out -e cpu2006docs.tar-4-4.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-4e.out -e cpu2006docs.tar-4-4e.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-0.out -e cpu2006docs.tar-1-0.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-1.out -e cpu2006docs.tar-1-1.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-2.out -e cpu2006docs.tar-1-2.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-3e.out -e cpu2006docs.tar-1-3e.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-4.out -e cpu2006docs.tar-1-4.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-4e.out -e cpu2006docs.tar-1-4e.err echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4e" > run.sh ; $BIND bash run.sh (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 20:08:32 (1554561512.3503)
+Stop command: 2019-04-06 20:08:32 (1554561512.50599)
+Elapsed time for command: 00:00:00 (0.155690908432007)
+557.xz_r: copy 0 non-zero return code (exit code=127, signal=0)
+
+****************************************
+Contents of cpu2006docs.tar-4-0.err
+****************************************
+/bin/sh: 1: numactl: not found
+
+****************************************
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ # 2: _=./runcpu
+ # 3: LANG=en_IN
+ # 4: LIBC_FATAL_STDERR_=1
+ # 5: J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+ # 6: LOGNAME=iiitd
+ # 7: LD_LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ # 8: LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ # 9: PATH=/usr/lib/llvm-6.0/bin:/home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+ #10: SSH_CONNECTION=192.168.1.99 59258 192.168.32.210 22
+ #11: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mk
+v=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+ #12: XDG_RUNTIME_DIR=/run/user/1000
+ #13: LESSCLOSE=/usr/bin/lesspipe %s %s
+ #14: LESSOPEN=| /usr/bin/lesspipe %s
+ #15: DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+ #16: SHELL=/bin/bash
+ #17: OLDPWD=/home/iiitd/Desktop/hw11/config
+ #18: SSH_CLIENT=192.168.1.99 59258 22
+ #19: SSH_TTY=/dev/pts/0
+ #20: SHLVL=1
+ #21: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ #22: PWD=/home/iiitd/Desktop/hw11/bin
+ #23: SPEC=/home/iiitd/Desktop/hw11
+ #24: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ #25: USER=iiitd
+ #26: SPECDB_PWD=/home/iiitd/Desktop/hw11/bin
+ #27: LANGUAGE=en_IN:en
+ #28: J2SDKDIR=/usr/lib/jvm/java-8-oracle
+ #29: MAIL=/var/mail/iiitd
+ #30: TERM=xterm-256color
+ #31: HOME=/home/iiitd
+ #32: XDG_SESSION_ID=15
+ #33: OMP_NUM_THREADS=1
+ #34: OMP_THREAD_LIMIT=1
+running commands in speccmds.cmd 1 times
+runs started at		1554561512, 353350000, Sat Apr  6 20:08:32 2019
+run 1 started at	1554561512, 353379000, Sat Apr  6 20:08:32 2019
+child started: 0,	1554561512, 353387000, pid=23319, 'echo "../run_base_test_test1-m64.0000/xz_r_base.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0" > run.sh ; numactl -m 0 --physcpubind=0 bash run.sh'
+child finished: 0,	1554561512, 353963000, sec=0, nsec=576000, pid=23319, rc=32512
+run 1 finished at:	1554561512, 353975000, Sat Apr  6 20:08:32 2019
+run 1 elapsed time:	         0, 000596000, 0.000596000
+runs finished at	1554561512, 353990000, Sat Apr  6 20:08:32 2019
+runs elapsed time:	         0, 000640000, 0.000640000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+Workload elapsed time (copy 0 workload 1) = 0.000576 seconds
+Copy 0 of 557.xz_r (base test) run 1 finished at 2019-04-06 20:08:32.  Total elapsed time: 0.000576
+Benchmark Times:
+  Run Start:    2019-04-06 20:08:32 (1554561512)
+  Rate Start:   2019-04-06 20:08:32 (1554561512.35339)
+  Rate End:     2019-04-06 20:08:32 (1554561512.35396)
+  Run Stop:     2019-04-06 20:08:32 (1554561512)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 575780 0.000576)
+ Error 557.xz_r base test ratio=-0.00, runtime=0.000576, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%, errorcode=RE
+-----------------------------------
+  Running 557.xz_r test peak test1-m64 (1 copy) [2019-04-06 20:08:32]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -b numactl -m 0 --physcpubind=0
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_peak_test_test1-m64.0000
+    -o cpu2006docs.tar-4-0.out -e cpu2006docs.tar-4-0.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-1.out -e cpu2006docs.tar-4-1.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-2.out -e cpu2006docs.tar-4-2.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-3e.out -e cpu2006docs.tar-4-3e.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-4.out -e cpu2006docs.tar-4-4.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-4-4e.out -e cpu2006docs.tar-4-4e.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-0.out -e cpu2006docs.tar-1-0.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-1.out -e cpu2006docs.tar-1-1.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-2.out -e cpu2006docs.tar-1-2.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-3e.out -e cpu2006docs.tar-1-3e.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-4.out -e cpu2006docs.tar-1-4.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4" > run.sh ; $BIND bash run.sh (timed)
+    -o cpu2006docs.tar-1-4e.out -e cpu2006docs.tar-1-4e.err echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4e" > run.sh ; $BIND bash run.sh (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 20:08:32 (1554561512.94584)
+Stop command: 2019-04-06 20:08:33 (1554561513.10159)
+Elapsed time for command: 00:00:00 (0.155749082565308)
+557.xz_r: copy 0 non-zero return code (exit code=127, signal=0)
+
+****************************************
+Contents of cpu2006docs.tar-4-0.err
+****************************************
+/bin/sh: 1: numactl: not found
+
+****************************************
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_peak_test_test1-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: MAIL=/var/mail/iiitd
+ # 2: TERM=xterm-256color
+ # 3: XDG_SESSION_ID=15
+ # 4: HOME=/home/iiitd
+ # 5: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+ # 6: SPEC=/home/iiitd/Desktop/hw11
+ # 7: LANGUAGE=en_IN:en
+ # 8: J2SDKDIR=/usr/lib/jvm/java-8-oracle
+ # 9: SPECDB_PWD=/home/iiitd/Desktop/hw11/bin
+ #10: USER=iiitd
+ #11: SSH_CLIENT=192.168.1.99 59258 22
+ #12: SSH_TTY=/dev/pts/0
+ #13: OLDPWD=/home/iiitd/Desktop/hw11/config
+ #14: PWD=/home/iiitd/Desktop/hw11/bin
+ #15: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ #16: SHLVL=1
+ #17: LESSCLOSE=/usr/bin/lesspipe %s %s
+ #18: LESSOPEN=| /usr/bin/lesspipe %s
+ #19: SHELL=/bin/bash
+ #20: DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+ #21: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mk
+v=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+ #22: SSH_CONNECTION=192.168.1.99 59258 192.168.32.210 22
+ #23: XDG_RUNTIME_DIR=/run/user/1000
+ #24: LOGNAME=iiitd
+ #25: LIBC_FATAL_STDERR_=1
+ #26: J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+ #27: PATH=/usr/lib/llvm-6.0/bin:/home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+ #28: LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #29: LD_LIBRARY_PATH=/usr/lib/llvm-6.0/lib
+ #30: _=./runcpu
+ #31: LANG=en_IN
+ #32: XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ #33: OMP_NUM_THREADS=1
+ #34: OMP_THREAD_LIMIT=1
+running commands in speccmds.cmd 1 times
+runs started at		1554561512, 949144000, Sat Apr  6 20:08:32 2019
+run 1 started at	1554561512, 949167000, Sat Apr  6 20:08:32 2019
+child started: 0,	1554561512, 949175000, pid=23327, 'echo "../run_peak_test_test1-m64.0000/xz_r_peak.test1-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0" > run.sh ; numactl -m 0 --physcpubind=0 bash run.sh'
+child finished: 0,	1554561512, 949760000, sec=0, nsec=585000, pid=23327, rc=32512
+run 1 finished at:	1554561512, 949775000, Sat Apr  6 20:08:32 2019
+run 1 elapsed time:	         0, 000608000, 0.000608000
+runs finished at	1554561512, 949791000, Sat Apr  6 20:08:32 2019
+runs elapsed time:	         0, 000647000, 0.000647000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+Workload elapsed time (copy 0 workload 1) = 0.000585 seconds
+Copy 0 of 557.xz_r (peak test) run 1 finished at 2019-04-06 20:08:32.  Total elapsed time: 0.000585
+Benchmark Times:
+  Run Start:    2019-04-06 20:08:32 (1554561512)
+  Rate Start:   2019-04-06 20:08:32 (1554561512.94917)
+  Rate End:     2019-04-06 20:08:32 (1554561512.94976)
+  Run Stop:     2019-04-06 20:08:33 (1554561513)
+  Run Elapsed:  00:00:01 (1)
+  Run Reported: 00:00:00 (0 585079 0.000585)
+ Error 557.xz_r peak test ratio=-0.00, runtime=0.000585, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%, errorcode=RE
+Error: 2x557.xz_r
+Producing Raw Reports
+ label: test1-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base, SPECrate2017_int_peak
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.rsf
+Parsing flags for 557.xz_r base: done
+Parsing flags for 557.xz_r peak: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.csv
+    format: PDF -> 
+A line in your General Notes section is too long!
+
+/home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.019.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 20:08:36; 7 total seconds elapsed
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.019.log
+
+runcpu finished at 2019-04-06 20:08:37; 8 total seconds elapsed
