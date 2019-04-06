@@ -1,0 +1,1348 @@
+runcpu v5825 started at 2019-04-06 19:42:56 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 502.gcc_r intrate
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   intrate                    
+-------------------------------------------------------------------------------
+
+Setting up environment for running intrate...
+Starting runcpu for intrate...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Read 112 info lines from the sysinfo program.
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test
+benchmarks= 500.perlbench_r,502.gcc_r,505.mcf_r,520.omnetpp_r,523.xalancbmk_r,525.x264_r,531.deepsjeng_r,541.leela_r,548.exchange2_r,557.xz_r,999.specrand_ir
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/gcc"
+
+Benchmarks selected: 500.perlbench_r, 502.gcc_r, 505.mcf_r, 520.omnetpp_r, 523.xalancbmk_r, 525.x264_r, 531.deepsjeng_r, 541.leela_r, 548.exchange2_r, 557.xz_r, 999.specrand_ir
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/exe/exchange2_r_base.mytest-m64), no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/exe/exchange2_r_base.mytest-m64), no checksums were
+  found in the config file.  They will be installed after build.
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize        -DSPEC_LINUX_X64    -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize     -DSPEC_LINUX_X64    -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 500.perlbench_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -I. -I./include -I./spec_qsort -DSPEC_502 -DSPEC_AUTO_SUPPRESS_OPENMP -DIN_GCC -DHAVE_CONFIG_H  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./include -I./spec_qsort -DSPEC_502 -DSPEC_AUTO_SUPPRESS_OPENMP -DIN_GCC -DHAVE_CONFIG_H"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 502.gcc_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 505.mcf_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG -Isimulator/platdep -Isimulator -Imodel -DWITH_NETBUILDER -DSPEC_AUTO_SUPPRESS_OPENMP  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Isimulator/platdep -Isimulator -Imodel -DWITH_NETBUILDER -DSPEC_AUTO_SUPPRESS_OPENMP"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize          <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 520.omnetpp_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_INMEM_MESSAGELOADER -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize    -DSPEC_LINUX     -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CXXFLAGS="-DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_INMEM_MESSAGELOADER -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: CXXOPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX"
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize     -DSPEC_LINUX     <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+P: PORTABILITY="-DSPEC_LINUX"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 523.xalancbmk_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 525.x264_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG -DSMALL_MEMORY -DSPEC_AUTO_SUPPRESS_OPENMP  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DSMALL_MEMORY -DSPEC_AUTO_SUPPRESS_OPENMP"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize          <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 531.deepsjeng_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG -I. -DSPEC_AUTO_SUPPRESS_OPENMP  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I. -DSPEC_AUTO_SUPPRESS_OPENMP"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize          <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 541.leela_r base mytest-m64
+------------------------------------------------------------------------
+When checking options for /home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/exe/exchange2_r_base.mytest-m64, no checksums were
+  found in the config file.  They will be installed after build.
+When checking executables (/home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/exe/exchange2_r_base.mytest-m64), no checksums were
+  found in the config file.  They will be installed after build.
+  Building 548.exchange2_r base mytest-m64: (build_base_mytest-m64.0000) [2019-04-06 19:43:04]
+Wrote to makefile '/home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/build/build_base_mytest-m64.0000/Makefile.deps':
+# End dependencies
+# These are the build dependencies
+Wrote to makefile '/home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/build/build_base_mytest-m64.0000/Makefile.spec':
+TUNE=base
+LABEL=mytest-m64
+NUMBER=548
+NAME=exchange2_r
+SOURCES= exchange2.F90
+EXEBASE=exchange2_r
+NEED_MATH=
+BENCHLANG=F
+BENCH_FLAGS      = -DSPEC_AUTO_SUPPRESS_OPENMP
+CC               = $(SPECLANG)gcc -std=c99   -m64
+CC_VERSION_OPTION = -v
+CXX              = $(SPECLANG)g++     -std=c++03 -m64
+CXX_VERSION_OPTION = -v
+EXTRA_COPTIMIZE  = -fno-strict-aliasing -fgnu89-inline
+EXTRA_PORTABILITY = -DSPEC_LP64
+FC               = $(SPECLANG)gfortran           -m64
+FC_VERSION_OPTION = -v
+OPTIMIZE         = -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize
+OS               = unix
+SPECLANG         = /usr/bin/
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_label_override = 0
+backup_config    = 1
+baseexe          = exchange2_r
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 548.exchange2_r
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 1
+changedhash      = 0
+check_version    = 0
+clean_between_builds = no
+command_add_redirect = 1
+commanderrfile   = speccmds.err
+commandexe       = exchange2_r_base.mytest-m64
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+comparedir       = compare
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configfile       = gcc
+configpath       = /home/iiitd/Desktop/hw11/config/gcc.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+default_submit   = $command
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = 
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 0
+enable_monitor   = 1
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+exthash_bits     = 256
+failflags        = 0
+fake             = 0
+feedback         = 1
+flag_url_base    = https://www.spec.org/auto/cpu2017/Docs/benchmarks/flags/
+floatcompare     = 
+force_monitor    = 0
+from_runcpu      = 2
+fw_bios          = 
+hostname         = iiit-d
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = 
+hw_cpu_max_mhz   = 
+hw_cpu_name      = Intel Core i5-7500
+hw_cpu_nominal_mhz = 
+hw_disk          = 341 GB  add more disk info here
+hw_memory001     = 7.677 GB fixme: If using DDR4, the format is:
+hw_memory002     = 'N GB (N x N GB nRxn PC4-nnnnX-X)'
+hw_model         = 
+hw_nchips        = 1
+hw_ncores        = 
+hw_ncpuorder     = 
+hw_nthreadspercore = 
+hw_ocache        = 
+hw_other         = 
+hw_pcache        = 
+hw_scache        = 
+hw_tcache        = 
+hw_vendor        = My Corporation
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+inputgenerrfile  = inputgen.err
+inputgenfile     = inputgen.cmd
+inputgenoutfile  = inputgen.out
+inputgenstdoutfile = inputgen.stdout
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+label            = mytest-m64
+license_num      = nnn (Your SPEC license number)
+line_width       = 1020
+link_input_files = 1
+locking          = 1
+log              = CPU2017
+log_line_width   = 1020
+log_timestamp    = 0
+logfile          = /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0
+logname          = /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0
+lognum           = 007.0
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = --jobs=8
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 3
+max_unknown_uncertainty = 1
+mean_anyway      = 1
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 2
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = exchange2_r
+nansupport       = 
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+noratios         = 0
+note_preenv      = 1
+notes_plat_sysinfo_000 =  Sysinfo program /home/iiitd/Desktop/hw11/bin/sysinfo
+notes_plat_sysinfo_005 =  Rev: r5974 of 2018-05-19 9bcde8f2999c33d61f64985e45859ea9
+notes_plat_sysinfo_010 =  running on iiit-d Sat Apr  6 19:42:58 2019
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  SUT (System Under Test) info as seen by some common utilities.
+notes_plat_sysinfo_025 =  For more information on this section, see
+notes_plat_sysinfo_030 =     https://www.spec.org/cpu2017/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+notes_plat_sysinfo_050 =        1  "physical id"s (chips)
+notes_plat_sysinfo_055 =        4 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent. The following
+notes_plat_sysinfo_065 =     excerpts from /proc/cpuinfo might not be reliable.  Use with caution.)
+notes_plat_sysinfo_070 =        cpu cores : 4
+notes_plat_sysinfo_075 =        siblings  : 4
+notes_plat_sysinfo_080 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_085 = 
+notes_plat_sysinfo_090 =  From lscpu:
+notes_plat_sysinfo_095 =       Architecture:        x86_64
+notes_plat_sysinfo_100 =       CPU op-mode(s):      32-bit, 64-bit
+notes_plat_sysinfo_105 =       Byte Order:          Little Endian
+notes_plat_sysinfo_110 =       CPU(s):              4
+notes_plat_sysinfo_115 =       On-line CPU(s) list: 0-3
+notes_plat_sysinfo_120 =       Thread(s) per core:  1
+notes_plat_sysinfo_125 =       Core(s) per socket:  4
+notes_plat_sysinfo_130 =       Socket(s):           1
+notes_plat_sysinfo_135 =       NUMA node(s):        1
+notes_plat_sysinfo_140 =       Vendor ID:           GenuineIntel
+notes_plat_sysinfo_145 =       CPU family:          6
+notes_plat_sysinfo_150 =       Model:               158
+notes_plat_sysinfo_155 =       Model name:          Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+notes_plat_sysinfo_160 =       Stepping:            9
+notes_plat_sysinfo_165 =       CPU MHz:             3605.455
+notes_plat_sysinfo_170 =       CPU max MHz:         3800.0000
+notes_plat_sysinfo_175 =       CPU min MHz:         800.0000
+notes_plat_sysinfo_180 =       BogoMIPS:            6816.00
+notes_plat_sysinfo_185 =       Virtualization:      VT-x
+notes_plat_sysinfo_190 =       L1d cache:           32K
+notes_plat_sysinfo_195 =       L1i cache:           32K
+notes_plat_sysinfo_200 =       L2 cache:            256K
+notes_plat_sysinfo_205 =       L3 cache:            6144K
+notes_plat_sysinfo_210 =       NUMA node0 CPU(s):   0-3
+notes_plat_sysinfo_215 =       Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
+notes_plat_sysinfo_220 =       pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp
+notes_plat_sysinfo_225 =       lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid
+notes_plat_sysinfo_230 =       aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3
+notes_plat_sysinfo_235 =       sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer
+notes_plat_sysinfo_240 =       aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single
+notes_plat_sysinfo_245 =       pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust
+notes_plat_sysinfo_250 =       bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt
+notes_plat_sysinfo_255 =       xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window
+notes_plat_sysinfo_260 =       hwp_epp flush_l1d
+notes_plat_sysinfo_265 = 
+notes_plat_sysinfo_270 =  /proc/cpuinfo cache data
+notes_plat_sysinfo_275 =     cache size : 6144 KB
+notes_plat_sysinfo_280 = 
+notes_plat_sysinfo_285 =  From numactl --hardware  WARNING: a numactl 'node' might or might not correspond to a
+notes_plat_sysinfo_290 =  physical chip.
+notes_plat_sysinfo_295 = 
+notes_plat_sysinfo_300 =  From /proc/meminfo
+notes_plat_sysinfo_305 =     MemTotal:        8049856 kB
+notes_plat_sysinfo_310 =     HugePages_Total:     128
+notes_plat_sysinfo_315 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_320 = 
+notes_plat_sysinfo_325 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_330 =     Ubuntu 18.04.1 LTS
+notes_plat_sysinfo_335 = 
+notes_plat_sysinfo_340 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_345 =     debian_version: buster/sid
+notes_plat_sysinfo_350 =     os-release:
+notes_plat_sysinfo_355 =        NAME="Ubuntu"
+notes_plat_sysinfo_360 =        VERSION="18.04.1 LTS (Bionic Beaver)"
+notes_plat_sysinfo_365 =        ID=ubuntu
+notes_plat_sysinfo_370 =        ID_LIKE=debian
+notes_plat_sysinfo_375 =        PRETTY_NAME="Ubuntu 18.04.1 LTS"
+notes_plat_sysinfo_380 =        VERSION_ID="18.04"
+notes_plat_sysinfo_385 =        HOME_URL="https://www.ubuntu.com/"
+notes_plat_sysinfo_390 =        SUPPORT_URL="https://help.ubuntu.com/"
+notes_plat_sysinfo_395 = 
+notes_plat_sysinfo_400 =  uname -a:
+notes_plat_sysinfo_405 =     Linux iiit-d 4.15.0-46-generic \#49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019 x86_64
+notes_plat_sysinfo_410 =     x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_415 = 
+notes_plat_sysinfo_420 =  Kernel self-reported vulnerability status:
+notes_plat_sysinfo_425 = 
+notes_plat_sysinfo_430 =  CVE-2017-5754 (Meltdown):          Mitigation: PTI
+notes_plat_sysinfo_435 =  CVE-2017-5753 (Spectre variant 1): Mitigation: __user pointer sanitization
+notes_plat_sysinfo_440 =  CVE-2017-5715 (Spectre variant 2): Mitigation: Full generic retpoline, IBPB, IBRS_FW
+notes_plat_sysinfo_445 = 
+notes_plat_sysinfo_450 =  run-level 5 2019-04-06 10:17
+notes_plat_sysinfo_455 = 
+notes_plat_sysinfo_460 =  SPEC is set to: /home/iiitd/Desktop/hw11
+notes_plat_sysinfo_465 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_470 =     /dev/sda4      ext4  341G  143G  180G  45% /
+notes_plat_sysinfo_475 = 
+notes_plat_sysinfo_480 =  Additional information from dmidecode follows.  WARNING: Use caution when you interpret
+notes_plat_sysinfo_485 =  this section. The 'dmidecode' program reads system data which is "intended to allow
+notes_plat_sysinfo_490 =  hardware to be accurately determined", but the intent may not be met, as there are
+notes_plat_sysinfo_495 =  frequent changes to hardware, firmware, and the "DMTF SMBIOS" standard.
+notes_plat_sysinfo_500 = 
+notes_plat_sysinfo_505 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 548
+obiwan           = 
+os_exe_ext       = 
+output_format    = txt,html,cfg,pdf,csv
+output_root      = 
+outputdir        = output
+parallel_test    = 1
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r
+plain_train      = 1
+platform         = 
+power            = 0
+preENV_LD_LIBRARY_PATH = %{gcc_dir}/gcc
+preenv           = 0
+prefix           = 
+prepared_by      = iiitd  (is never output, only tags rawfile)
+ranks            = 1
+rawhash_bits     = 256
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+runcpu           = /home/iiitd/Desktop/hw11/bin/harness/runcpu --configfile gcc --size test --copies 1 --noreportable --iterations 1 --noreportable --nopower --runmode rate --tune base --size test intrate --nopreenv --note-preenv --logfile /home/iiitd/Desktop/hw11/tmp/CPU2017.007/templogs/preenv.intrate.007.0 --lognum 007.0 --from_runcpu 2
+rundir           = run
+runmode          = rate
+safe_eval        = 1
+save_build_files = 
+section_specifier_fatal = 1
+setprocgroup     = 1
+setup_error      = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+srcsource        = /home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/src
+stagger          = 10
+strict_rundir_verify = 1
+sw_avail         = 
+sw_base_ptrsize  = 64-bit
+sw_compiler001   = C/C++/Fortran: Version 7.2.1 of GCC, the
+sw_compiler002   = GNU Compiler Collection
+sw_file          = ext4
+sw_os001         = Ubuntu 18.04.1 LTS
+sw_os002         = 4.15.0-46-generic
+sw_other         = 
+sw_peak_ptrsize  = 64-bit
+sw_state         = Run level 5 (add definition here)
+sysinfo_hash_bits = 256
+sysinfo_program  = specperl /home/iiitd/Desktop/hw11/bin/sysinfo
+sysinfo_program_hash = sysinfo:SHA:32259ebd59f3e93740723202f27c44c82ee68e0f2e40cd2ca50cfd5519772397
+table            = 1
+teeout           = 0
+test_date        = Apr-2019
+test_sponsor     = My Corporation
+tester           = My Corporation
+threads          = 1
+top              = /home/iiitd/Desktop/hw11
+train_single_thread = 0
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+uncertainty_exception = 5
+update           = 0
+update_url       = http://www.spec.org/auto/cpu2017/updates/
+use_submit_for_compare = 0
+use_submit_for_speed = 0
+username         = iiitd
+verbose          = 5
+verify_binaries  = 1
+version          = 0.905000
+version_url      = http://www.spec.org/auto/cpu2017/current_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = s.txt
+  Compile for '548.exchange2_r' started at: 2019-04-06 19:43:04 (1554559984)
+Issuing make.clean command 'specmake --output-sync --jobs=8 clean'
+Start make.clean command: 2019-04-06 19:43:04 (1554559984.03711)
+rm -rf *.o  s.txt
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf exchange2_r
+rm -rf exchange2_r.exe
+rm -rf core
+Stop make.clean command: 2019-04-06 19:43:04 (1554559984.20193)
+Elapsed time for make.clean command: 00:00:00 (0.164819002151489)
+Issuing make command 'specmake --output-sync --jobs=8 build'
+Start make command: 2019-04-06 19:43:04 (1554559984.20294)
+/home/iiitd/Desktop/hw11/bin/specperl /home/iiitd/Desktop/hw11/bin/harness/specpp -DSPEC -DNDEBUG -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_LP64 exchange2.F90 -o exchange2.fppized.f90
+/usr/bin/gfortran           -m64 -c -o exchange2.fppized.o -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize exchange2.fppized.f90
+specmake: /usr/bin/gfortran: Command not found
+specmake: *** [/home/iiitd/Desktop/hw11/benchspec/Makefile.defaults:386: exchange2.fppized.o] Error 127
+Stop make command: 2019-04-06 19:43:04 (1554559984.41681)
+Elapsed time for make command: 00:00:00 (0.21386981010437)
+Error with make 'specmake --output-sync --jobs=8 build':
+  ----------------------------------------------------------------------------
+  Please review this file:
+    "/home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/build/build_base_mytest-m64.0000/make.out"
+  ----------------------------------------------------------------------------
+  Command returned exit code 2
+  Error with make!
+  Compile for '548.exchange2_r' ended at: 2019-04-06 19:43:04 (1554559984)
+  Elapsed compile for '548.exchange2_r': 00:00:00 (0)
+*** Error building 548.exchange2_r base
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>            -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 557.xz_r base mytest-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ispecrand-common  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ispecrand-common"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>            -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 999.specrand_ir base mytest-m64
+
+Build successes for intrate: None
+Build errors for intrate: 548.exchange2_r(base; CE)
+
+Setting Up Run Directories
+  Setting up 500.perlbench_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 502.gcc_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 505.mcf_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 520.omnetpp_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 523.xalancbmk_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 525.x264_r test base mytest-m64 (1 copy): OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f inputgen.cmd -e inputgen.err -o inputgen.stdout'
+Start command: 2019-04-06 19:43:08 (1554559988.65184)
+Stop command: 2019-04-06 19:43:11 (1554559991.76983)
+Elapsed time for command: 00:00:03 (3.11799001693726)
+Input generation total elapsed time = 3 seconds
+Input generation elapsed time (0:1) = 2.961278 seconds
+run_base_test_mytest-m64.0000
+  Setting up 531.deepsjeng_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 541.leela_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 557.xz_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+  Setting up 999.specrand_ir test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 500.perlbench_r test base mytest-m64 (1 copy) [2019-04-06 19:43:13]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000
+    -o makerand.out -e makerand.err ../run_base_test_mytest-m64.0000/perlbench_r_base.mytest-m64 -I. -I./lib makerand.pl > makerand.out 2>> makerand.err (timed)
+    -o test.out -e test.err ../run_base_test_mytest-m64.0000/perlbench_r_base.mytest-m64 -I. -I./lib test.pl > test.out 2>> test.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:43:13 (1554559993.37795)
+Stop command: 2019-04-06 19:43:39 (1554560019.79875)
+Elapsed time for command: 00:00:26 (26.4208068847656)
+Workload elapsed time (copy 0 workload 1) = 0.214698 seconds
+Workload elapsed time (copy 0 workload 2) = 26.04926 seconds
+Copy 0 of 500.perlbench_r (base test) run 1 finished at 2019-04-06 19:43:39.  Total elapsed time: 26.263958
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'makerand.out' with floatcompare=1, nansupport=no
+comparing 'test.out' with floatcompare=1, nansupport=no
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:43:39 (1554560019.8462)
+Stop command: 2019-04-06 19:43:40 (1554560020.26565)
+Elapsed time for command: 00:00:00 (0.419444799423218)
+Benchmark Times:
+  Run Start:    2019-04-06 19:43:13 (1554559993)
+  Rate Start:   2019-04-06 19:43:13 (1554559993.38222)
+  Rate End:     2019-04-06 19:43:39 (1554560019.64619)
+  Run Stop:     2019-04-06 19:43:39 (1554560019)
+  Run Elapsed:  00:00:26 (26)
+  Run Reported: 00:00:26 (26 263978004 26.263978)
+ Success 500.perlbench_r base test ratio=-0.00, runtime=26.263978, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 502.gcc_r test base mytest-m64 (1 copy) [2019-04-06 19:43:40]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_mytest-m64.0000
+    -o t1.opts-O3_-finline-limit_50000.out -e t1.opts-O3_-finline-limit_50000.err ../run_base_test_mytest-m64.0000/cpugcc_r_base.mytest-m64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s > t1.opts-O3_-finline-limit_50000.out 2>> t1.opts-O3_-finline-limit_50000.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:43:40 (1554560020.80537)
+Stop command: 2019-04-06 19:43:40 (1554560020.96855)
+Elapsed time for command: 00:00:00 (0.163180112838745)
+Workload elapsed time (copy 0 workload 1) = 0.00651 seconds
+Copy 0 of 502.gcc_r (base test) run 1 finished at 2019-04-06 19:43:40.  Total elapsed time: 0.00651
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 't1.opts-O3_-finline-limit_50000.s' with floatcompare=1, nansupport=no
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:43:41 (1554560021.01443)
+Stop command: 2019-04-06 19:43:41 (1554560021.2992)
+Elapsed time for command: 00:00:00 (0.284765005111694)
+Benchmark Times:
+  Run Start:    2019-04-06 19:43:40 (1554560020)
+  Rate Start:   2019-04-06 19:43:40 (1554560020.80948)
+  Rate End:     2019-04-06 19:43:40 (1554560020.81599)
+  Run Stop:     2019-04-06 19:43:40 (1554560020)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 6510019 0.00651)
+ Success 502.gcc_r base test ratio=-0.00, runtime=0.006510, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 505.mcf_r test base mytest-m64 (1 copy) [2019-04-06 19:43:41]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_test_mytest-m64.0000/mcf_r_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:43:41 (1554560021.34597)
+Stop command: 2019-04-06 19:43:53 (1554560033.48544)
+Elapsed time for command: 00:00:12 (12.139466047287)
+Workload elapsed time (copy 0 workload 1) = 11.981481 seconds
+Copy 0 of 505.mcf_r (base test) run 1 finished at 2019-04-06 19:43:53.  Total elapsed time: 11.981481
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:43:53 (1554560033.5324)
+Stop command: 2019-04-06 19:43:53 (1554560033.94395)
+Elapsed time for command: 00:00:00 (0.411546945571899)
+Benchmark Times:
+  Run Start:    2019-04-06 19:43:41 (1554560021)
+  Rate Start:   2019-04-06 19:43:41 (1554560021.35134)
+  Rate End:     2019-04-06 19:43:53 (1554560033.33282)
+  Run Stop:     2019-04-06 19:43:53 (1554560033)
+  Run Elapsed:  00:00:12 (12)
+  Run Reported: 00:00:11 (11 981481075 11.981481)
+ Success 505.mcf_r base test ratio=-0.00, runtime=11.981481, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 520.omnetpp_r test base mytest-m64 (1 copy) [2019-04-06 19:43:54]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/520.omnetpp_r/run/run_base_test_mytest-m64.0000
+    -o omnetpp.General-0.out -e omnetpp.General-0.err ../run_base_test_mytest-m64.0000/omnetpp_r_base.mytest-m64 -c General -r 0 > omnetpp.General-0.out 2>> omnetpp.General-0.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/520.omnetpp_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/520.omnetpp_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:43:54 (1554560034.22386)
+Stop command: 2019-04-06 19:43:58 (1554560038.72639)
+Elapsed time for command: 00:00:04 (4.50252223014832)
+Workload elapsed time (copy 0 workload 1) = 4.345782 seconds
+Copy 0 of 520.omnetpp_r (base test) run 1 finished at 2019-04-06 19:43:58.  Total elapsed time: 4.345782
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'General-0.sca' with abstol=1e-06, reltol=1e-05
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/520.omnetpp_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/520.omnetpp_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:43:58 (1554560038.77305)
+Stop command: 2019-04-06 19:44:02 (1554560042.22627)
+Elapsed time for command: 00:00:03 (3.45322203636169)
+Benchmark Times:
+  Run Start:    2019-04-06 19:43:54 (1554560034)
+  Rate Start:   2019-04-06 19:43:54 (1554560034.22798)
+  Rate End:     2019-04-06 19:43:58 (1554560038.57377)
+  Run Stop:     2019-04-06 19:43:58 (1554560038)
+  Run Elapsed:  00:00:04 (4)
+  Run Reported: 00:00:04 (4 345782041 4.345782)
+ Success 520.omnetpp_r base test ratio=-0.00, runtime=4.345782, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 523.xalancbmk_r test base mytest-m64 (1 copy) [2019-04-06 19:44:02]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/523.xalancbmk_r/run/run_base_test_mytest-m64.0000
+    -o test-test.out -e test-test.err ../run_base_test_mytest-m64.0000/cpuxalan_r_base.mytest-m64 -v test.xml xalanc.xsl > test-test.out 2>> test-test.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/523.xalancbmk_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/523.xalancbmk_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:44:02 (1554560042.85714)
+Stop command: 2019-04-06 19:44:03 (1554560043.07882)
+Elapsed time for command: 00:00:00 (0.221679925918579)
+Workload elapsed time (copy 0 workload 1) = 0.064941 seconds
+Copy 0 of 523.xalancbmk_r (base test) run 1 finished at 2019-04-06 19:44:02.  Total elapsed time: 0.064941
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'test-test.out' with 
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/523.xalancbmk_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/523.xalancbmk_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:44:03 (1554560043.12481)
+Stop command: 2019-04-06 19:44:03 (1554560043.4102)
+Elapsed time for command: 00:00:00 (0.285392045974731)
+Benchmark Times:
+  Run Start:    2019-04-06 19:44:02 (1554560042)
+  Rate Start:   2019-04-06 19:44:02 (1554560042.8614)
+  Rate End:     2019-04-06 19:44:02 (1554560042.92634)
+  Run Stop:     2019-04-06 19:44:03 (1554560043)
+  Run Elapsed:  00:00:01 (1)
+  Run Reported: 00:00:00 (0 64940929 0.064941)
+ Success 523.xalancbmk_r base test ratio=-0.00, runtime=0.064941, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 525.x264_r test base mytest-m64 (1 copy) [2019-04-06 19:44:03]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000
+    -o run_000-156_x264_r_base.mytest-m64_x264.out -e run_000-156_x264_r_base.mytest-m64_x264.err ../run_base_test_mytest-m64.0000/x264_r_base.mytest-m64 --dumpyuv 50 --frames 156 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-156_x264_r_base.mytest-m64_x264.out 2>> run_000-156_x264_r_base.mytest-m64_x264.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:44:03 (1554560043.5184)
+Stop command: 2019-04-06 19:44:49 (1554560089.93819)
+Elapsed time for command: 00:00:46 (46.4197850227356)
+Workload elapsed time (copy 0 workload 1) = 46.262126 seconds
+Copy 0 of 525.x264_r (base test) run 1 finished at 2019-04-06 19:44:49.  Total elapsed time: 46.262126
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'imagevalidate_frame_100.out' with reltol=0.085
+comparing 'imagevalidate_frame_155.out' with reltol=0.085
+comparing 'imagevalidate_frame_50.out' with reltol=0.085
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:44:49 (1554560089.98844)
+Stop command: 2019-04-06 19:44:50 (1554560090.61329)
+Elapsed time for command: 00:00:00 (0.624855995178223)
+Benchmark Times:
+  Run Start:    2019-04-06 19:44:03 (1554560043)
+  Rate Start:   2019-04-06 19:44:03 (1554560043.52339)
+  Rate End:     2019-04-06 19:44:49 (1554560089.78552)
+  Run Stop:     2019-04-06 19:44:49 (1554560089)
+  Run Elapsed:  00:00:46 (46)
+  Run Reported: 00:00:46 (46 262125968 46.262126)
+ Success 525.x264_r base test ratio=-0.00, runtime=46.262126, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 531.deepsjeng_r test base mytest-m64 (1 copy) [2019-04-06 19:44:50]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/531.deepsjeng_r/run/run_base_test_mytest-m64.0000
+    -o test.out -e test.err ../run_base_test_mytest-m64.0000/deepsjeng_r_base.mytest-m64 test.txt > test.out 2>> test.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/531.deepsjeng_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/531.deepsjeng_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:44:50 (1554560090.66383)
+Stop command: 2019-04-06 19:44:58 (1554560098.43905)
+Elapsed time for command: 00:00:07 (7.77522110939026)
+Workload elapsed time (copy 0 workload 1) = 7.617108 seconds
+Copy 0 of 531.deepsjeng_r (base test) run 1 finished at 2019-04-06 19:44:58.  Total elapsed time: 7.617108
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'test.out' with obiwan=1
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/531.deepsjeng_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/531.deepsjeng_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:44:58 (1554560098.48525)
+Stop command: 2019-04-06 19:44:58 (1554560098.77099)
+Elapsed time for command: 00:00:00 (0.285746097564697)
+Benchmark Times:
+  Run Start:    2019-04-06 19:44:50 (1554560090)
+  Rate Start:   2019-04-06 19:44:50 (1554560090.66944)
+  Rate End:     2019-04-06 19:44:58 (1554560098.28655)
+  Run Stop:     2019-04-06 19:44:58 (1554560098)
+  Run Elapsed:  00:00:08 (8)
+  Run Reported: 00:00:07 (7 617108106 7.617108)
+ Success 531.deepsjeng_r base test ratio=-0.00, runtime=7.617108, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 541.leela_r test base mytest-m64 (1 copy) [2019-04-06 19:44:58]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/541.leela_r/run/run_base_test_mytest-m64.0000
+    -o test.out -e test.err ../run_base_test_mytest-m64.0000/leela_r_base.mytest-m64 test.sgf > test.out 2>> test.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/541.leela_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/541.leela_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:44:58 (1554560098.85029)
+Stop command: 2019-04-06 19:45:05 (1554560105.02267)
+Elapsed time for command: 00:00:06 (6.17238712310791)
+Workload elapsed time (copy 0 workload 1) = 6.014722 seconds
+Copy 0 of 541.leela_r (base test) run 1 finished at 2019-04-06 19:45:04.  Total elapsed time: 6.014722
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'test.out' with 
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/541.leela_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/541.leela_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:45:05 (1554560105.06893)
+Stop command: 2019-04-06 19:45:05 (1554560105.35388)
+Elapsed time for command: 00:00:00 (0.284947872161865)
+Benchmark Times:
+  Run Start:    2019-04-06 19:44:58 (1554560098)
+  Rate Start:   2019-04-06 19:44:58 (1554560098.85536)
+  Rate End:     2019-04-06 19:45:04 (1554560104.87008)
+  Run Stop:     2019-04-06 19:45:05 (1554560105)
+  Run Elapsed:  00:00:07 (7)
+  Run Reported: 00:00:06 (6 14722108 6.014722)
+ Success 541.leela_r base test ratio=-0.00, runtime=6.014722, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 557.xz_r test base mytest-m64 (1 copy) [2019-04-06 19:45:05]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000
+    -o cpu2006docs.tar-4-0.out -e cpu2006docs.tar-4-0.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0 > cpu2006docs.tar-4-0.out 2>> cpu2006docs.tar-4-0.err (timed)
+    -o cpu2006docs.tar-4-1.out -e cpu2006docs.tar-4-1.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1 > cpu2006docs.tar-4-1.out 2>> cpu2006docs.tar-4-1.err (timed)
+    -o cpu2006docs.tar-4-2.out -e cpu2006docs.tar-4-2.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2 > cpu2006docs.tar-4-2.out 2>> cpu2006docs.tar-4-2.err (timed)
+    -o cpu2006docs.tar-4-3e.out -e cpu2006docs.tar-4-3e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e > cpu2006docs.tar-4-3e.out 2>> cpu2006docs.tar-4-3e.err (timed)
+    -o cpu2006docs.tar-4-4.out -e cpu2006docs.tar-4-4.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4 > cpu2006docs.tar-4-4.out 2>> cpu2006docs.tar-4-4.err (timed)
+    -o cpu2006docs.tar-4-4e.out -e cpu2006docs.tar-4-4e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e > cpu2006docs.tar-4-4e.out 2>> cpu2006docs.tar-4-4e.err (timed)
+    -o cpu2006docs.tar-1-0.out -e cpu2006docs.tar-1-0.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0 > cpu2006docs.tar-1-0.out 2>> cpu2006docs.tar-1-0.err (timed)
+    -o cpu2006docs.tar-1-1.out -e cpu2006docs.tar-1-1.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1 > cpu2006docs.tar-1-1.out 2>> cpu2006docs.tar-1-1.err (timed)
+    -o cpu2006docs.tar-1-2.out -e cpu2006docs.tar-1-2.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2 > cpu2006docs.tar-1-2.out 2>> cpu2006docs.tar-1-2.err (timed)
+    -o cpu2006docs.tar-1-3e.out -e cpu2006docs.tar-1-3e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e > cpu2006docs.tar-1-3e.out 2>> cpu2006docs.tar-1-3e.err (timed)
+    -o cpu2006docs.tar-1-4.out -e cpu2006docs.tar-1-4.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4 > cpu2006docs.tar-1-4.out 2>> cpu2006docs.tar-1-4.err (timed)
+    -o cpu2006docs.tar-1-4e.out -e cpu2006docs.tar-1-4e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4e > cpu2006docs.tar-1-4e.out 2>> cpu2006docs.tar-1-4e.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:45:05 (1554560105.43003)
+Stop command: 2019-04-06 19:45:17 (1554560117.59003)
+Elapsed time for command: 00:00:12 (12.1600048542023)
+Workload elapsed time (copy 0 workload 1) = 0.748916 seconds
+Workload elapsed time (copy 0 workload 2) = 0.85186 seconds
+Workload elapsed time (copy 0 workload 3) = 1.032378 seconds
+Workload elapsed time (copy 0 workload 4) = 2.234415 seconds
+Workload elapsed time (copy 0 workload 5) = 1.50877 seconds
+Workload elapsed time (copy 0 workload 6) = 2.340917 seconds
+Workload elapsed time (copy 0 workload 7) = 0.483265 seconds
+Workload elapsed time (copy 0 workload 8) = 0.493013 seconds
+Workload elapsed time (copy 0 workload 9) = 0.48608 seconds
+Workload elapsed time (copy 0 workload 10) = 0.628031 seconds
+Workload elapsed time (copy 0 workload 11) = 0.543047 seconds
+Workload elapsed time (copy 0 workload 12) = 0.650884 seconds
+Copy 0 of 557.xz_r (base test) run 1 finished at 2019-04-06 19:45:17.  Total elapsed time: 12.001576
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'cpu2006docs.tar-1-0.out' with 
+comparing 'cpu2006docs.tar-1-1.out' with 
+comparing 'cpu2006docs.tar-1-2.out' with 
+comparing 'cpu2006docs.tar-1-3e.out' with 
+comparing 'cpu2006docs.tar-1-4.out' with 
+comparing 'cpu2006docs.tar-1-4e.out' with 
+comparing 'cpu2006docs.tar-4-0.out' with 
+comparing 'cpu2006docs.tar-4-1.out' with 
+comparing 'cpu2006docs.tar-4-2.out' with 
+comparing 'cpu2006docs.tar-4-3e.out' with 
+comparing 'cpu2006docs.tar-4-4.out' with 
+comparing 'cpu2006docs.tar-4-4e.out' with 
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:45:17 (1554560117.64815)
+Stop command: 2019-04-06 19:45:19 (1554560119.32352)
+Elapsed time for command: 00:00:01 (1.67537093162537)
+Benchmark Times:
+  Run Start:    2019-04-06 19:45:05 (1554560105)
+  Rate Start:   2019-04-06 19:45:05 (1554560105.43549)
+  Rate End:     2019-04-06 19:45:17 (1554560117.43739)
+  Run Stop:     2019-04-06 19:45:17 (1554560117)
+  Run Elapsed:  00:00:12 (12)
+  Run Reported: 00:00:12 (12 1890182 12.00189)
+ Success 557.xz_r base test ratio=-0.00, runtime=12.001890, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running 999.specrand_ir test base mytest-m64 (1 copy) [2019-04-06 19:45:19]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/999.specrand_ir/run/run_base_test_mytest-m64.0000
+    -o rand.24239.out -e rand.24239.err ../run_base_test_mytest-m64.0000/specrand_ir_base.mytest-m64 324342 24239 > rand.24239.out 2>> rand.24239.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/999.specrand_ir/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/999.specrand_ir/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:45:19 (1554560119.41356)
+Stop command: 2019-04-06 19:45:19 (1554560119.57855)
+Elapsed time for command: 00:00:00 (0.164995908737183)
+Workload elapsed time (copy 0 workload 1) = 0.007014 seconds
+Copy 0 of 999.specrand_ir (base test) run 1 finished at 2019-04-06 19:45:19.  Total elapsed time: 0.007014
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'rand.24239.out' with floatcompare=1, nansupport=0
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/999.specrand_ir/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/999.specrand_ir/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:45:19 (1554560119.62501)
+Stop command: 2019-04-06 19:45:19 (1554560119.98229)
+Elapsed time for command: 00:00:00 (0.357283115386963)
+Benchmark Times:
+  Run Start:    2019-04-06 19:45:19 (1554560119)
+  Rate Start:   2019-04-06 19:45:19 (1554560119.41914)
+  Rate End:     2019-04-06 19:45:19 (1554560119.42616)
+  Run Stop:     2019-04-06 19:45:19 (1554560119)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 7014036 0.007014)
+ Success 999.specrand_ir base test ratio=-0.00, runtime=0.007014, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x500.perlbench_r 1x502.gcc_r 1x505.mcf_r 1x520.omnetpp_r 1x523.xalancbmk_r 1x525.x264_r 1x531.deepsjeng_r 1x541.leela_r 1x557.xz_r 1x999.specrand_ir
+Error: 1x548.exchange2_r
+Producing Raw Reports
+ label: mytest-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.rsf
+Parsing flags for 500.perlbench_r base: done
+Parsing flags for 502.gcc_r base: done
+Parsing flags for 505.mcf_r base: done
+Parsing flags for 520.omnetpp_r base: done
+Parsing flags for 523.xalancbmk_r base: done
+Parsing flags for 525.x264_r base: done
+Parsing flags for 531.deepsjeng_r base: done
+Parsing flags for 541.leela_r base: done
+Parsing flags for 557.xz_r base: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.cfg, /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.orig.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.csv
+    format: PDF -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.007.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 19:45:26; 149 total seconds elapsed
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.007.log
+
+runcpu finished at 2019-04-06 19:45:26; 150 total seconds elapsed

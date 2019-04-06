@@ -1,0 +1,179 @@
+runcpu v5825 started at 2019-04-06 19:53:27 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 557.xz_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   557.xz_r                   
+-------------------------------------------------------------------------------
+
+Setting up environment for running 557.xz_r...
+Starting runcpu for 557.xz_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Read 112 info lines from the sysinfo program.
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test
+benchmarks= 557.xz_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/gcc"
+
+Benchmarks selected: 557.xz_r
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DSPEC_AUTO_BYTEORDER=0x12345678 -DHAVE_CONFIG_H=1 -DSPEC_MEM_IO -DSPEC_XZ -DSPEC_AUTO_SUPPRESS_OPENMP -I. -Ispec_mem_io -Isha-2 -Icommon -Iliblzma/api -Iliblzma/lzma -Iliblzma/common -Iliblzma/check -Iliblzma/simple -Iliblzma/delta -Iliblzma/lz -Iliblzma/rangecoder"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>            -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 557.xz_r base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 557.xz_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 557.xz_r test base mytest-m64 (1 copy) [2019-04-06 19:53:29]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000
+    -o cpu2006docs.tar-4-0.out -e cpu2006docs.tar-4-0.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0 > cpu2006docs.tar-4-0.out 2>> cpu2006docs.tar-4-0.err (timed)
+    -o cpu2006docs.tar-4-1.out -e cpu2006docs.tar-4-1.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1 > cpu2006docs.tar-4-1.out 2>> cpu2006docs.tar-4-1.err (timed)
+    -o cpu2006docs.tar-4-2.out -e cpu2006docs.tar-4-2.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2 > cpu2006docs.tar-4-2.out 2>> cpu2006docs.tar-4-2.err (timed)
+    -o cpu2006docs.tar-4-3e.out -e cpu2006docs.tar-4-3e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e > cpu2006docs.tar-4-3e.out 2>> cpu2006docs.tar-4-3e.err (timed)
+    -o cpu2006docs.tar-4-4.out -e cpu2006docs.tar-4-4.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4 > cpu2006docs.tar-4-4.out 2>> cpu2006docs.tar-4-4.err (timed)
+    -o cpu2006docs.tar-4-4e.out -e cpu2006docs.tar-4-4e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e > cpu2006docs.tar-4-4e.out 2>> cpu2006docs.tar-4-4e.err (timed)
+    -o cpu2006docs.tar-1-0.out -e cpu2006docs.tar-1-0.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0 > cpu2006docs.tar-1-0.out 2>> cpu2006docs.tar-1-0.err (timed)
+    -o cpu2006docs.tar-1-1.out -e cpu2006docs.tar-1-1.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1 > cpu2006docs.tar-1-1.out 2>> cpu2006docs.tar-1-1.err (timed)
+    -o cpu2006docs.tar-1-2.out -e cpu2006docs.tar-1-2.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2 > cpu2006docs.tar-1-2.out 2>> cpu2006docs.tar-1-2.err (timed)
+    -o cpu2006docs.tar-1-3e.out -e cpu2006docs.tar-1-3e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e > cpu2006docs.tar-1-3e.out 2>> cpu2006docs.tar-1-3e.err (timed)
+    -o cpu2006docs.tar-1-4.out -e cpu2006docs.tar-1-4.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4 > cpu2006docs.tar-1-4.out 2>> cpu2006docs.tar-1-4.err (timed)
+    -o cpu2006docs.tar-1-4e.out -e cpu2006docs.tar-1-4e.err ../run_base_test_mytest-m64.0000/xz_r_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4e > cpu2006docs.tar-1-4e.out 2>> cpu2006docs.tar-1-4e.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:53:29 (1554560609.87861)
+Stop command: 2019-04-06 19:53:42 (1554560622.03224)
+Elapsed time for command: 00:00:12 (12.1536290645599)
+Workload elapsed time (copy 0 workload 1) = 0.756381 seconds
+Workload elapsed time (copy 0 workload 2) = 0.846142 seconds
+Workload elapsed time (copy 0 workload 3) = 1.02473 seconds
+Workload elapsed time (copy 0 workload 4) = 2.224291 seconds
+Workload elapsed time (copy 0 workload 5) = 1.509467 seconds
+Workload elapsed time (copy 0 workload 6) = 2.330226 seconds
+Workload elapsed time (copy 0 workload 7) = 0.470184 seconds
+Workload elapsed time (copy 0 workload 8) = 0.495258 seconds
+Workload elapsed time (copy 0 workload 9) = 0.491514 seconds
+Workload elapsed time (copy 0 workload 10) = 0.638009 seconds
+Workload elapsed time (copy 0 workload 11) = 0.554694 seconds
+Workload elapsed time (copy 0 workload 12) = 0.655935 seconds
+Copy 0 of 557.xz_r (base test) run 1 finished at 2019-04-06 19:53:41.  Total elapsed time: 11.996831
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'cpu2006docs.tar-1-0.out' with 
+comparing 'cpu2006docs.tar-1-1.out' with 
+comparing 'cpu2006docs.tar-1-2.out' with 
+comparing 'cpu2006docs.tar-1-3e.out' with 
+comparing 'cpu2006docs.tar-1-4.out' with 
+comparing 'cpu2006docs.tar-1-4e.out' with 
+comparing 'cpu2006docs.tar-4-0.out' with 
+comparing 'cpu2006docs.tar-4-1.out' with 
+comparing 'cpu2006docs.tar-4-2.out' with 
+comparing 'cpu2006docs.tar-4-3e.out' with 
+comparing 'cpu2006docs.tar-4-4.out' with 
+comparing 'cpu2006docs.tar-4-4e.out' with 
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:53:42 (1554560622.0902)
+Stop command: 2019-04-06 19:53:43 (1554560623.77201)
+Elapsed time for command: 00:00:01 (1.68181109428406)
+Benchmark Times:
+  Run Start:    2019-04-06 19:53:29 (1554560609)
+  Rate Start:   2019-04-06 19:53:29 (1554560609.88259)
+  Rate End:     2019-04-06 19:53:41 (1554560621.87974)
+  Run Stop:     2019-04-06 19:53:42 (1554560622)
+  Run Elapsed:  00:00:13 (13)
+  Run Reported: 00:00:11 (11 997144937 11.997145)
+ Success 557.xz_r base test ratio=-0.00, runtime=11.997145, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x557.xz_r
+Producing Raw Reports
+ label: mytest-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.rsf
+Parsing flags for 557.xz_r base: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.cfg, /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.orig.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.csv
+    format: PDF -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.012.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 19:53:47; 19 total seconds elapsed
+Info: file_tail(19010): file '/home/iiitd/Desktop/hw11/tmp/CPU2017.012/templogs/preenv.intrate.012.0.debug' was removed and will no longer be followed.  No action is required.
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.012.log
+
+runcpu finished at 2019-04-06 19:53:47; 20 total seconds elapsed

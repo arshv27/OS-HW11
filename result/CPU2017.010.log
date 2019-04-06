@@ -1,0 +1,226 @@
+runcpu v5825 started at 2019-04-06 19:51:36 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 525.x264_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   525.x264_r                 
+-------------------------------------------------------------------------------
+
+Setting up environment for running 525.x264_r...
+Starting runcpu for 525.x264_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Read 112 info lines from the sysinfo program.
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test
+benchmarks= 525.x264_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/gcc"
+
+Benchmarks selected: 525.x264_r
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_SUPPRESS_OPENMP -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 525.x264_r base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 525.x264_r test base mytest-m64 (1 copy): OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f inputgen.cmd -e inputgen.err -o inputgen.stdout'
+Start command: 2019-04-06 19:51:40 (1554560500.134)
+Stop command: 2019-04-06 19:51:43 (1554560503.25165)
+Elapsed time for command: 00:00:03 (3.11764788627625)
+Input generation total elapsed time = 3 seconds
+Input generation elapsed time (0:1) = 2.961041 seconds
+run_base_test_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 525.x264_r test base mytest-m64 (1 copy) [2019-04-06 19:51:44]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000
+    -o run_000-156_x264_r_base.mytest-m64_x264.out -e run_000-156_x264_r_base.mytest-m64_x264.err ../run_base_test_mytest-m64.0000/x264_r_base.mytest-m64 --dumpyuv 50 --frames 156 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-156_x264_r_base.mytest-m64_x264.out 2>> run_000-156_x264_r_base.mytest-m64_x264.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:51:44 (1554560504.11769)
+Stop command: 2019-04-06 19:52:30 (1554560550.7146)
+Elapsed time for command: 00:00:46 (46.5969128608704)
+Workload elapsed time (copy 0 workload 1) = 46.440192 seconds
+Copy 0 of 525.x264_r (base test) run 1 finished at 2019-04-06 19:52:30.  Total elapsed time: 46.440192
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'imagevalidate_frame_100.out' with reltol=0.085
+comparing 'imagevalidate_frame_155.out' with reltol=0.085
+comparing 'imagevalidate_frame_50.out' with reltol=0.085
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:52:30 (1554560550.76539)
+Stop command: 2019-04-06 19:52:31 (1554560551.38897)
+Elapsed time for command: 00:00:00 (0.623583078384399)
+Benchmark Times:
+  Run Start:    2019-04-06 19:51:44 (1554560504)
+  Rate Start:   2019-04-06 19:51:44 (1554560504.12174)
+  Rate End:     2019-04-06 19:52:30 (1554560550.56193)
+  Run Stop:     2019-04-06 19:52:30 (1554560550)
+  Run Elapsed:  00:00:46 (46)
+  Run Reported: 00:00:46 (46 440191984 46.440192)
+ Success 525.x264_r base test ratio=-0.00, runtime=46.440192, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x525.x264_r
+Producing Raw Reports
+ label: mytest-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.rsf
+Parsing flags for 525.x264_r base: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.cfg, /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.orig.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.csv
+    format: PDF -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.010.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 19:52:35; 58 total seconds elapsed
+Info: file_tail(18590): file '/home/iiitd/Desktop/hw11/tmp/CPU2017.010/templogs/preenv.intrate.010.0.debug' was removed and will no longer be followed.  No action is required.
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.010.log
+
+runcpu finished at 2019-04-06 19:52:35; 59 total seconds elapsed

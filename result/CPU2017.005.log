@@ -1,0 +1,20 @@
+runcpu v5825 started at 2019-04-06 19:40:00 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 505.gcc_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+
+Can't find benchmark '505.gcc_r'
+WARNING: Can't parse '505.gcc_r' into a single benchmark name, benchset name,
+	or metric name.
+No benchmark suite selected!  Expected one or more of 'fprate', 'fpspeed', 'intrate', 'intspeed' or 'all'.
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.005.log
+The debug log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.005.log.debug
+*
+* Temporary files were NOT deleted; keeping temporaries such as
+* /home/iiitd/Desktop/hw11/result/CPU2017.005.log.debug
+* (These may be large!)
+*
+runcpu finished at 2019-04-06 19:40:01; 0 total seconds elapsed

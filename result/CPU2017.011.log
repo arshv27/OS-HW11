@@ -1,0 +1,148 @@
+runcpu v5825 started at 2019-04-06 19:52:51 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 505.mcf_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   505.mcf_r                  
+-------------------------------------------------------------------------------
+
+Setting up environment for running 505.mcf_r...
+Starting runcpu for 505.mcf_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Read 112 info lines from the sysinfo program.
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test
+benchmarks= 505.mcf_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/gcc"
+
+Benchmarks selected: 505.mcf_r
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize            -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize         -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 505.mcf_r base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 505.mcf_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 505.mcf_r test base mytest-m64 (1 copy) [2019-04-06 19:52:53]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_test_mytest-m64.0000/mcf_r_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:52:53 (1554560573.83682)
+Stop command: 2019-04-06 19:53:06 (1554560586.04962)
+Elapsed time for command: 00:00:12 (12.2128059864044)
+Workload elapsed time (copy 0 workload 1) = 12.054889 seconds
+Copy 0 of 505.mcf_r (base test) run 1 finished at 2019-04-06 19:53:05.  Total elapsed time: 12.054889
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:53:06 (1554560586.09684)
+Stop command: 2019-04-06 19:53:06 (1554560586.5091)
+Elapsed time for command: 00:00:00 (0.412264108657837)
+Benchmark Times:
+  Run Start:    2019-04-06 19:52:53 (1554560573)
+  Rate Start:   2019-04-06 19:52:53 (1554560573.84214)
+  Rate End:     2019-04-06 19:53:05 (1554560585.89703)
+  Run Stop:     2019-04-06 19:53:06 (1554560586)
+  Run Elapsed:  00:00:13 (13)
+  Run Reported: 00:00:12 (12 54888963 12.054889)
+ Success 505.mcf_r base test ratio=-0.00, runtime=12.054889, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x505.mcf_r
+Producing Raw Reports
+ label: mytest-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.rsf
+Parsing flags for 505.mcf_r base: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.cfg, /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.orig.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.csv
+    format: PDF -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.011.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 19:53:09; 17 total seconds elapsed
+Info: file_tail(18824): file '/home/iiitd/Desktop/hw11/tmp/CPU2017.011/templogs/preenv.intrate.011.0.debug' was removed and will no longer be followed.  No action is required.
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.011.log
+
+runcpu finished at 2019-04-06 19:53:10; 18 total seconds elapsed

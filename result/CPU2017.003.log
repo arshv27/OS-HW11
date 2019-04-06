@@ -1,0 +1,151 @@
+runcpu v5825 started at 2019-04-06 19:38:41 on "iiit-d"
+runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 500.perlbench_r
+toolset: linux-x86_64
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type      Benchmarks
+--------   --------   --------   ----------------   ---------------------------
+validate   rate       test       SPECrate2017_int   500.perlbench_r            
+-------------------------------------------------------------------------------
+
+Setting up environment for running 500.perlbench_r...
+Starting runcpu for 500.perlbench_r...
+Running "specperl /home/iiitd/Desktop/hw11/bin/sysinfo" to gather system information.
+sysinfo: r5974 of 2018-05-19 (9bcde8f2999c33d61f64985e45859ea9)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get DIMM info from dmidecode
+Read 112 info lines from the sysinfo program.
+Retrieving flags file (/home/iiitd/Desktop/hw11/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test
+benchmarks= 500.perlbench_r
+outputs   = txt,html,cfg,pdf,csv
+username  = iiitd
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/gcc"
+
+Benchmarks selected: 500.perlbench_r
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize        -DSPEC_LINUX_X64    -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -DSPEC_AUTO_SUPPRESS_OPENMP -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize     -DSPEC_LINUX_X64    -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targ
+et=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+  Up to date 500.perlbench_r base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 500.perlbench_r test base mytest-m64 (1 copy): run_base_test_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running 500.perlbench_r test base mytest-m64 (1 copy) [2019-04-06 19:38:45]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000
+    -o makerand.out -e makerand.err ../run_base_test_mytest-m64.0000/perlbench_r_base.mytest-m64 -I. -I./lib makerand.pl > makerand.out 2>> makerand.err (timed)
+    -o test.out -e test.err ../run_base_test_mytest-m64.0000/perlbench_r_base.mytest-m64 -I. -I./lib test.pl > test.out 2>> test.err (timed)
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2019-04-06 19:38:45 (1554559725.71185)
+Stop command: 2019-04-06 19:39:12 (1554559752.05968)
+Elapsed time for command: 00:00:26 (26.347827911377)
+Workload elapsed time (copy 0 workload 1) = 0.215596 seconds
+Workload elapsed time (copy 0 workload 2) = 25.975739 seconds
+Copy 0 of 500.perlbench_r (base test) run 1 finished at 2019-04-06 19:39:11.  Total elapsed time: 26.191335
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	OMP_THREAD_LIMIT	=> '1'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '1')
+	'OMP_THREAD_LIMIT' added: (value now '1')
+comparing 'makerand.out' with floatcompare=1, nansupport=no
+comparing 'test.out' with floatcompare=1, nansupport=no
+Specinvoke: /home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/iiitd/Desktop/hw11/bin/specinvoke -d /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2019-04-06 19:39:12 (1554559752.10699)
+Stop command: 2019-04-06 19:39:12 (1554559752.54531)
+Elapsed time for command: 00:00:00 (0.438327789306641)
+Benchmark Times:
+  Run Start:    2019-04-06 19:38:45 (1554559725)
+  Rate Start:   2019-04-06 19:38:45 (1554559725.71575)
+  Rate End:     2019-04-06 19:39:11 (1554559751.9071)
+  Run Stop:     2019-04-06 19:39:12 (1554559752)
+  Run Elapsed:  00:00:27 (27)
+  Run Reported: 00:00:26 (26 191350936 26.191351)
+ Success 500.perlbench_r base test ratio=-0.00, runtime=26.191351, copies=1, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x500.perlbench_r
+Producing Raw Reports
+ label: mytest-m64
+  workload: test
+   benchset: intspeed
+   benchset: intrate
+   metric: SPECrate2017_int_base
+    format: raw -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.rsf
+Parsing flags for 500.perlbench_r base: done
+Doing flag reduction: done
+    format: flags -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.flags.html
+    format: cfg -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.cfg, /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.orig.cfg
+    format: CSV -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.csv
+    format: PDF -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.pdf
+    format: HTML -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.html
+    format: Text -> /home/iiitd/Desktop/hw11/result/CPU2017.003.intrate.test.txt
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2019-04-06 19:39:16; 34 total seconds elapsed
+Info: file_tail(14138): file '/home/iiitd/Desktop/hw11/tmp/CPU2017.003/templogs/preenv.intrate.003.0.debug' was removed and will no longer be followed.  No action is required.
+The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.003.log
+
+runcpu finished at 2019-04-06 19:39:16; 35 total seconds elapsed

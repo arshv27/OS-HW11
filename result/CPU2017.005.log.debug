@@ -1,0 +1,454 @@
+==============================================================================
+Debug log for CPU2017.  This file contains very detailed debugging
+output from the CPU2017 tools (as if "--verbose 99" had been specified) and is
+typically useful only to developers of the CPU2017 toolset.
+
+For a successful run, this debug log will be removed automatically, unless you
+specify "--keeptmp" on the command line, or "keeptmp=1" in your config file.
+
+If you file a support request with cpu2017support@spec.org, you may be
+asked to submit this file.
+------------------------------------------------------------------------------
+
+Environment variables that may have been set or changed by shrc:
+SPEC: /home/iiitd/Desktop/hw11
+PATH: /home/iiitd/Desktop/hw11/bin:/home/iiitd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/iiitd/Downloads/pintos/src/utils
+SPECPERLLIB: 
+LD_LIBRARY_PATH: 
+DYLD_LIBRARY_PATH: 
+LC_ALL: 
+LC_LANG: 
+SPECDB_PWD: /home/iiitd/Desktop/hw11/bin
+------------------------------------------------------------------------------
+
+Runspec's verbose version output:
+                 This is the SPEC CPU2017 benchmark tools suite.
+
+Version summary:
+    CPU2017 version: 1.0.5
+ Benchmarks version: 1.0.5
+      Tools version: 1.0.5
+    runcpu version: v5825 ($Id: runcpu 5825 2017-06-28 16:13:35Z CloyceS $)
+
+Tools information:
+ Tools package installed: linux-x86_64
+ File locking method: fcntl(2) (probably network-safe)
+Mode |  UID  |  GID  |   Size  |   Modification Time  | Name
+0755 | 1000  | 1000  | 2097095 |  2016-09-15 03:40:26 | specperl
+0755 | 1000  | 1000  |  208608 |  2016-09-15 03:40:26 | specmake
+0755 | 1000  | 1000  |   32976 |  2016-09-15 03:40:27 | specinvoke
+0755 | 1000  | 1000  |  250560 |  2016-09-15 03:40:26 | specrxp
+0755 | 1000  | 1000  |    1579 |  2018-04-19 23:23:15 | runcpu
+0755 | 1000  | 1000  |  177367 |  2017-06-28 21:43:35 | harness/runcpu
+0755 | 1000  | 1000  |    1579 |  2018-04-19 23:23:15 | specpp
+0755 | 1000  | 1000  |   89993 |  2017-03-02 01:06:28 | harness/specpp
+0755 | 1000  | 1000  |    1579 |  2018-04-19 23:23:15 | specdiff
+0755 | 1000  | 1000  |    9806 |  2016-06-10 01:20:26 | harness/specdiff
+0755 | 1000  | 1000  |  224728 |  2016-09-15 03:40:26 | specxz
+0755 | 1000  | 1000  |   73192 |  2016-09-15 03:40:27 | specsha512sum
+
+Version info for specperl (specperl): This is specperl 5, version 24, subversion 0 (v5.24.0) built for x86_64-linux
+                                      Compiled at Sep 14 2016 14:45:53
+                                      For more detail on specperl, say 'specperl -V'
+Version info for specmake (specmake): GNU Make 4.2.1
+Version info for specinvoke (specinvoke): specinvoke r4356 (OS implementation r4356)
+Version info for specrxp ($SPEC/bin/specrxp): RXP 1.5.0 Copyright Richard Tobin, LTG, HCRC, University of Edinburgh
+                                              Modified for use in SPEC benchmarks - 14 April 2011
+Version info for specpp ($SPEC/bin/specpp): specpp version 1.8.0SPEC
+Version info for specxz ($SPEC/bin/specxz): xz (XZ Utils) 5.2.2
+Version info for specsha512sum ($SPEC/bin/specsha512sum): sha512sum (specsum) 1.3
+
+==============================================================================
+
+1554559801.41: runcpu v5825 started at 2019-04-06 19:40:00 on "iiit-d"
+1554559801.41: runcpu is: /home/iiitd/Desktop/hw11/bin/harness/runcpu
+1554559801.41: runcpu: runcpu --config=gcc --size=test --copies=1 --noreportable --iterations=1 505.gcc_r
+1554559801.41: toolset: linux-x86_64
+
+1554559801.42: Locating benchmarks...Created default regexp '(?:^|(?<=\s))[-/]DSPEC(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]USPEC(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for USPEC in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_CPU in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DNDEBUG(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DNDEBUG in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]UNDEBUG(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for UNDEBUG in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_WINDOWS(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_WINDOWS in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_MEM_IO(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_MEM_IO in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_ILP32(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_ILP32 in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_P64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_P64 in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_LP64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_LP64 in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_ILP64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_ILP64 in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_SUPPRESS_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_SUPPRESS_OPENMP in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_AUTO_SUPPRESS_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_AUTO_SUPPRESS_OPENMP in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_OPENMP in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_NO_AUTO_BYTEORDER(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_NO_AUTO_BYTEORDER in /home/iiitd/Desktop/hw11/benchspec/flags-mandatory.xml
+1554559801.42: Reading suite directory for 'Makefile.defaults', '/home/iiitd/Desktop/hw11/benchspec'
+1554559801.42: Reading suite directory for 'version.txt', '/home/iiitd/Desktop/hw11/benchspec'
+1554559801.42: Reading suite directory for 'CPU', '/home/iiitd/Desktop/hw11/benchspec'
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '521.wrf_r'
+1554559801.43:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/521.wrf_r/Spec/object.pm in 0.003082991s
+1554559801.43:     Instantiated Spec::Benchmark::wrf_r521 in 0.000555992s
+1554559801.43:     Finding src.alts took 0.000051975s
+1554559801.43:   Setting up wrf_r took 0.004000187s
+
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '549.fotonik3d_r'
+1554559801.43:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/549.fotonik3d_r/Spec/object.pm in 0.000450134s
+1554559801.43:     Instantiated Spec::Benchmark::fotonik3d_r549 in 0.000262022s
+1554559801.43:     Finding src.alts took 0.000040054s
+1554559801.43:   Setting up fotonik3d_r took 0.000972033s
+
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '631.deepsjeng_s'
+1554559801.43:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/631.deepsjeng_s/Spec/object.pm in 0.000324965s
+1554559801.43:     Instantiated Spec::Benchmark::deepsjeng_s631 in 0.000249863s
+1554559801.43:     Finding src.alts took 0.000035048s
+1554559801.43:   Setting up deepsjeng_s took 0.000812054s
+
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpopenmp.bset'
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '638.imagick_s'
+1554559801.43:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/638.imagick_s/Spec/object.pm in 0.000685215s
+1554559801.43:     Instantiated Spec::Benchmark::imagick_s638 in 0.000262976s
+1554559801.43:     Finding src.alts took 0.000042915s
+1554559801.43:   Setting up imagick_s took 0.001243114s
+
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate_pure_cpp.bset'
+1554559801.43:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '508.namd_r'
+1554559801.44:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/508.namd_r/Spec/object.pm in 0.000391960s
+1554559801.44:     Instantiated Spec::Benchmark::namd_r508 in 0.000261068s
+1554559801.44:     Finding src.alts took 0.000041962s
+1554559801.44:   Setting up namd_r took 0.000931025s
+
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '520.omnetpp_r'
+1554559801.44:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/520.omnetpp_r/Spec/object.pm in 0.000515938s
+1554559801.44:     Instantiated Spec::Benchmark::omnetpp_r520 in 0.000297070s
+1554559801.44:     Finding src.alts took 0.000043154s
+1554559801.44:   Setting up omnetpp_r took 0.001082897s
+
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '649.fotonik3d_s'
+1554559801.44:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/649.fotonik3d_s/Spec/object.pm in 0.000349998s
+1554559801.44:     Instantiated Spec::Benchmark::fotonik3d_s649 in 0.000248194s
+1554559801.44:     Finding src.alts took 0.000035048s
+1554559801.44:   Setting up fotonik3d_s took 0.000831842s
+
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '620.omnetpp_s'
+1554559801.44:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/620.omnetpp_s/Spec/object.pm in 0.000380039s
+1554559801.44:     Instantiated Spec::Benchmark::omnetpp_s620 in 0.000257015s
+1554559801.44:     Finding src.alts took 0.000036955s
+1554559801.44:   Setting up omnetpp_s took 0.000880957s
+
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed_pure_fortran.bset'
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '648.exchange2_s'
+1554559801.44:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/648.exchange2_s/Spec/object.pm in 0.000389099s
+1554559801.44:     Instantiated Spec::Benchmark::exchange2_s648 in 0.000252008s
+1554559801.44:     Finding src.alts took 0.000037909s
+1554559801.44:   Setting up exchange2_s took 0.000915051s
+
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate_any_c.bset'
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate_pure_fortran.bset'
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_mixed_c.bset'
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'serial_speed.bset'
+1554559801.44:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_pure_fortran.bset'
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '627.cam4_s'
+1554559801.45:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/627.cam4_s/Spec/object.pm in 0.000488043s
+1554559801.45:     Instantiated Spec::Benchmark::cam4_s627 in 0.000283957s
+1554559801.45:     Finding src.alts took 0.000042915s
+1554559801.45:   Setting up cam4_s took 0.001067877s
+
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '554.roms_r'
+1554559801.45:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/554.roms_r/Spec/object.pm in 0.001352072s
+1554559801.45:     Instantiated Spec::Benchmark::roms_r554 in 0.000377893s
+1554559801.45:     Finding src.alts took 0.000048876s
+1554559801.45:   Setting up roms_r took 0.002064943s
+
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_any_cpp.bset'
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '628.pop2_s'
+1554559801.45:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/628.pop2_s/Spec/object.pm in 0.002815008s
+1554559801.45:     Instantiated Spec::Benchmark::pop2_s628 in 0.000405073s
+1554559801.45:     Finding src.alts took 0.000036001s
+1554559801.45:   Setting up pop2_s took 0.003481865s
+
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'specspeed.bset'
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'any_fortran.bset'
+1554559801.45:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate.bset'
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '996.specrand_fs'
+1554559801.46:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/996.specrand_fs/Spec/object.pm in 0.000338078s
+1554559801.46:     Instantiated Spec::Benchmark::specrand_fs996 in 0.000186920s
+1554559801.46:     Finding src.alts took 0.000025034s
+1554559801.46:   Setting up specrand_fs took 0.000731945s
+
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_any_c.bset'
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'openmp.bset'
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '548.exchange2_r'
+1554559801.46:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/548.exchange2_r/Spec/object.pm in 0.000262022s
+1554559801.46:     Instantiated Spec::Benchmark::exchange2_r548 in 0.000188112s
+1554559801.46:     Finding src.alts took 0.000025988s
+1554559801.46:   Setting up exchange2_r took 0.000646114s
+
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '603.bwaves_s'
+1554559801.46:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/603.bwaves_s/Spec/object.pm in 0.000298023s
+1554559801.46:     Instantiated Spec::Benchmark::bwaves_s603 in 0.000200987s
+1554559801.46:     Finding src.alts took 0.000021935s
+1554559801.46:   Setting up bwaves_s took 0.000684023s
+
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '998.specrand_is'
+1554559801.46:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/998.specrand_is/Spec/object.pm in 0.000266790s
+1554559801.46:     Instantiated Spec::Benchmark::specrand_is998 in 0.000214815s
+1554559801.46:     Finding src.alts took 0.000021935s
+1554559801.46:   Setting up specrand_is took 0.000669003s
+
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '557.xz_r'
+1554559801.46:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/557.xz_r/Spec/object.pm in 0.001184940s
+1554559801.46:     Instantiated Spec::Benchmark::xz_r557 in 0.000232220s
+1554559801.46:     Finding src.alts took 0.000031948s
+1554559801.46:   Setting up xz_r took 0.001641989s
+
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_any_cpp.bset'
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate_any_cpp.bset'
+1554559801.46:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '525.x264_r'
+1554559801.47:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/525.x264_r/Spec/object.pm in 0.001025915s
+1554559801.47:     Instantiated Spec::Benchmark::x264_r525 in 0.000255823s
+1554559801.47:     Finding src.alts took 0.000045061s
+1554559801.47:   Setting up x264_r took 0.001570940s
+
+1554559801.47:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed_any_c.bset'
+1554559801.47:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '527.cam4_r'
+1554559801.47:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/527.cam4_r/Spec/object.pm in 0.005373955s
+1554559801.47:     Instantiated Spec::Benchmark::cam4_r527 in 0.000619173s
+1554559801.47:     Finding src.alts took 0.000049829s
+1554559801.47:   Setting up cam4_r took 0.006361008s
+
+1554559801.47:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed_any_fortran.bset'
+1554559801.47:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'pure_cpp.bset'
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '623.xalancbmk_s'
+1554559801.48:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/623.xalancbmk_s/Spec/object.pm in 0.000461102s
+1554559801.48:     Instantiated Spec::Benchmark::xalancbmk_s623 in 0.000248909s
+1554559801.48:     Finding src.alts took 0.000044107s
+1554559801.48:   Setting up xalancbmk_s took 0.000999928s
+
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '654.roms_s'
+1554559801.48:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/654.roms_s/Spec/object.pm in 0.000809908s
+1554559801.48:     Instantiated Spec::Benchmark::roms_s654 in 0.000261068s
+1554559801.48:     Finding src.alts took 0.000044823s
+1554559801.48:   Setting up roms_s took 0.001368999s
+
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'pure_c.bset'
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '500.perlbench_r'
+1554559801.48:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/500.perlbench_r/Spec/object.pm in 0.001173019s
+1554559801.48:     Instantiated Spec::Benchmark::perlbench_r500 in 0.000331163s
+1554559801.48:     Finding src.alts took 0.000046015s
+1554559801.48:   Setting up perlbench_r took 0.001848936s
+
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '641.leela_s'
+1554559801.48:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/641.leela_s/Spec/object.pm in 0.000344992s
+1554559801.48:     Instantiated Spec::Benchmark::leela_s641 in 0.000236988s
+1554559801.48:     Finding src.alts took 0.000041008s
+1554559801.48:   Setting up leela_s took 0.000825167s
+
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_mixed.bset'
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '505.mcf_r'
+1554559801.48:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/505.mcf_r/Spec/object.pm in 0.000392914s
+1554559801.48:     Instantiated Spec::Benchmark::mcf_r505 in 0.000250101s
+1554559801.48:     Finding src.alts took 0.000040054s
+1554559801.48:   Setting up mcf_r took 0.000921965s
+
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'mixed_c.bset'
+1554559801.48:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '644.nab_s'
+1554559801.49:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/644.nab_s/Spec/object.pm in 0.000400066s
+1554559801.49:     Instantiated Spec::Benchmark::nab_s644 in 0.000250101s
+1554559801.49:     Finding src.alts took 0.000039816s
+1554559801.49:   Setting up nab_s took 0.000931978s
+
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '511.povray_r'
+1554559801.49:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/511.povray_r/Spec/object.pm in 0.000592947s
+1554559801.49:     Instantiated Spec::Benchmark::povray_r511 in 0.000247002s
+1554559801.49:     Finding src.alts took 0.000041008s
+1554559801.49:   Setting up povray_r took 0.001114130s
+
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '999.specrand_ir'
+1554559801.49:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/999.specrand_ir/Spec/object.pm in 0.000369072s
+1554559801.49:     Instantiated Spec::Benchmark::specrand_ir999 in 0.000246048s
+1554559801.49:     Finding src.alts took 0.000041008s
+1554559801.49:   Setting up specrand_ir took 0.000872135s
+
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '619.lbm_s'
+1554559801.49:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/619.lbm_s/Spec/object.pm in 0.000348091s
+1554559801.49:     Instantiated Spec::Benchmark::lbm_s619 in 0.000247002s
+1554559801.49:     Finding src.alts took 0.000051022s
+1554559801.49:   Setting up lbm_s took 0.000844002s
+
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_mixed_fortran.bset'
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '607.cactuBSSN_s'
+1554559801.49:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/607.cactuBSSN_s/Spec/object.pm in 0.000395060s
+1554559801.49:     Instantiated Spec::Benchmark::cactuBSSN_s607 in 0.000268936s
+1554559801.49:     Finding src.alts took 0.000038862s
+1554559801.49:   Setting up cactuBSSN_s took 0.000945091s
+
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'mixed.bset'
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_mixed_c.bset'
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_mixed_cpp.bset'
+1554559801.49:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_any_fortran.bset'
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '510.parest_r'
+1554559801.50:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/510.parest_r/Spec/object.pm in 0.000534058s
+1554559801.50:     Instantiated Spec::Benchmark::parest_r510 in 0.000272036s
+1554559801.50:     Finding src.alts took 0.000047922s
+1554559801.50:   Setting up parest_r took 0.001110792s
+
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '541.leela_r'
+1554559801.50:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/541.leela_r/Spec/object.pm in 0.000347137s
+1554559801.50:     Instantiated Spec::Benchmark::leela_r541 in 0.000263929s
+1554559801.50:     Finding src.alts took 0.000040054s
+1554559801.50:   Setting up leela_r took 0.000855923s
+
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed_pure_c.bset'
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '544.nab_r'
+1554559801.50:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/544.nab_r/Spec/object.pm in 0.000461102s
+1554559801.50:     Instantiated Spec::Benchmark::nab_r544 in 0.000261068s
+1554559801.50:     Finding src.alts took 0.000041962s
+1554559801.50:   Setting up nab_r took 0.001022816s
+
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_pure_fortran.bset'
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '519.lbm_r'
+1554559801.50:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/519.lbm_r/Spec/object.pm in 0.000364065s
+1554559801.50:     Instantiated Spec::Benchmark::lbm_r519 in 0.000274897s
+1554559801.50:     Finding src.alts took 0.000040054s
+1554559801.50:   Setting up lbm_r took 0.000916958s
+
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed.bset'
+1554559801.50:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '602.gcc_s'
+1554559801.50:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/602.gcc_s/Spec/object.pm in 0.000541925s
+1554559801.51:     Instantiated Spec::Benchmark::gcc_s602 in 0.000262976s
+1554559801.51:     Finding src.alts took 0.000044107s
+1554559801.51:   Setting up gcc_s took 0.001142979s
+
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '523.xalancbmk_r'
+1554559801.51:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/523.xalancbmk_r/Spec/object.pm in 0.000991106s
+1554559801.51:     Instantiated Spec::Benchmark::xalancbmk_r523 in 0.000332117s
+1554559801.51:     Finding src.alts took 0.000049829s
+1554559801.51:   Setting up xalancbmk_r took 0.001645088s
+
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'mixed_fortran.bset'
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate_pure_c.bset'
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '531.deepsjeng_r'
+1554559801.51:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/531.deepsjeng_r/Spec/object.pm in 0.000344992s
+1554559801.51:     Instantiated Spec::Benchmark::deepsjeng_r531 in 0.000236034s
+1554559801.51:     Finding src.alts took 0.000041962s
+1554559801.51:   Setting up deepsjeng_r took 0.000856161s
+
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_pure_c.bset'
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_any_c.bset'
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'any_c.bset'
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '600.perlbench_s'
+1554559801.51:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/600.perlbench_s/Spec/object.pm in 0.000578165s
+1554559801.51:     Instantiated Spec::Benchmark::perlbench_s600 in 0.000257969s
+1554559801.51:     Finding src.alts took 0.000043154s
+1554559801.51:   Setting up perlbench_s took 0.001139879s
+
+1554559801.51:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate_any_fortran.bset'
+1554559801.52:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '657.xz_s'
+1554559801.52:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/657.xz_s/Spec/object.pm in 0.000494003s
+1554559801.52:     Instantiated Spec::Benchmark::xz_s657 in 0.000243902s
+1554559801.52:     Finding src.alts took 0.000043154s
+1554559801.52:   Setting up xz_s took 0.001023054s
+
+1554559801.52:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'any_cpp.bset'
+1554559801.52:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intopenmp.bset'
+1554559801.52:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'pure_fortran.bset'
+1554559801.52:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intrate.bset'
+1554559801.52:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed_pure_cpp.bset'
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '621.wrf_s'
+1554559801.53:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/621.wrf_s/Spec/object.pm in 0.002099037s
+1554559801.53:     Instantiated Spec::Benchmark::wrf_s621 in 0.000396013s
+1554559801.53:     Finding src.alts took 0.000059128s
+1554559801.53:   Setting up wrf_s took 0.002862930s
+
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '538.imagick_r'
+1554559801.53:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/538.imagick_r/Spec/object.pm in 0.000759125s
+1554559801.53:     Instantiated Spec::Benchmark::imagick_r538 in 0.000265121s
+1554559801.53:     Finding src.alts took 0.000046015s
+1554559801.53:   Setting up imagick_r took 0.001322031s
+
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '503.bwaves_r'
+1554559801.53:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/503.bwaves_r/Spec/object.pm in 0.000396013s
+1554559801.53:     Instantiated Spec::Benchmark::bwaves_r503 in 0.000274897s
+1554559801.53:     Finding src.alts took 0.000041008s
+1554559801.53:   Setting up bwaves_r took 0.000931025s
+
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'CPU.bset'
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'mixed_cpp.bset'
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'serial.bset'
+1554559801.53:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_mixed_fortran.bset'
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '997.specrand_fr'
+1554559801.54:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/997.specrand_fr/Spec/object.pm in 0.000386000s
+1554559801.54:     Instantiated Spec::Benchmark::specrand_fr997 in 0.000247002s
+1554559801.54:     Finding src.alts took 0.000041008s
+1554559801.54:   Setting up specrand_fr took 0.000911951s
+
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_pure_c.bset'
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '605.mcf_s'
+1554559801.54:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/605.mcf_s/Spec/object.pm in 0.000362158s
+1554559801.54:     Instantiated Spec::Benchmark::mcf_s605 in 0.000246048s
+1554559801.54:     Finding src.alts took 0.000039101s
+1554559801.54:   Setting up mcf_s took 0.000879049s
+
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed_any_cpp.bset'
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_any_fortran.bset'
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_mixed_cpp.bset'
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fprate_pure_cpp.bset'
+1554559801.54:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'intspeed.bset'
+1554559801.55:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '502.gcc_r'
+1554559801.56:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/502.gcc_r/Spec/object.pm in 0.016196012s
+1554559801.56:     Instantiated Spec::Benchmark::gcc_r502 in 0.000576019s
+1554559801.56:     Finding src.alts took 0.000052929s
+1554559801.56:   Setting up gcc_r took 0.017158031s
+
+1554559801.56:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'specrate.bset'
+1554559801.57:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '526.blender_r'
+1554559801.57:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/526.blender_r/Spec/object.pm in 0.001863956s
+1554559801.57:     Instantiated Spec::Benchmark::blender_r526 in 0.000303030s
+1554559801.57:     Finding src.alts took 0.000049114s
+1554559801.57:   Setting up blender_r took 0.002503872s
+
+1554559801.57:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', 'fpspeed_mixed.bset'
+1554559801.57:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '625.x264_s'
+1554559801.57:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/625.x264_s/Spec/object.pm in 0.000789881s
+1554559801.57:     Instantiated Spec::Benchmark::x264_s625 in 0.000275135s
+1554559801.57:     Finding src.alts took 0.000067949s
+1554559801.57:   Setting up x264_s took 0.001425982s
+
+1554559801.57:   Reading benchmark directory for '/home/iiitd/Desktop/hw11/benchspec/CPU', '/home/iiitd/Desktop/hw11/benchspec', '507.cactuBSSN_r'
+1554559801.57:     Evaluated /home/iiitd/Desktop/hw11/benchspec/CPU/507.cactuBSSN_r/Spec/object.pm in 0.000725985s
+1554559801.57:     Instantiated Spec::Benchmark::cactuBSSN_r507 in 0.000308990s
+1554559801.57:     Finding src.alts took 0.000047922s
+1554559801.57:   Setting up cactuBSSN_r took 0.001343012s
+
+1554559801.57: Setting up suite took 0.146743059s
+1554559801.57: Reading suite directory for 'flags-mandatory.xml', '/home/iiitd/Desktop/hw11/benchspec'
+1554559801.57: found 47 benchmarks in 53 benchsets.
+1554559801.58: Reading config file '/home/iiitd/Desktop/hw11/config/gcc.cfg'
+1554559801.58: NOTICE: Skipping expression evaluation for 'label' on line 41 of
+1554559801.58:         /home/iiitd/Desktop/hw11/config/gcc.cfg
+1554559801.58: NOTICE: Skipping expression evaluation for 'bits' on line 46 of
+1554559801.58:         /home/iiitd/Desktop/hw11/config/gcc.cfg
+1554559801.58: NOTICE: Skipping expression evaluation for 'build_ncpus' on line 50 of
+1554559801.58:         /home/iiitd/Desktop/hw11/config/gcc.cfg
+1554559801.58: NOTICE: Skipping expression evaluation for 'os' on line 54 of
+1554559801.58:         /home/iiitd/Desktop/hw11/config/gcc.cfg
+1554559801.59: NOTICE: Expression evaluation for 'gcc_dir' on line 138 of
+1554559801.59:         /home/iiitd/Desktop/hw11/config/gcc.cfg failed.
+1554559801.59:         Expression:     '/usr/bin'
+1554559801.59:         Returned value: ''
+1554559801.59:         Eval returned:  'Unknown regexp modifier "/b" at (eval 503) line 1, at end of line
+1554559801.59: '
+1554559801.59: NOTICE: Skipping expression evaluation for 'suffix' on line 183 of
+1554559801.59:         /home/iiitd/Desktop/hw11/config/gcc.cfg
+
+1554559801.64: Can't find benchmark '505.gcc_r'
+1554559801.64: WARNING: Can't parse '505.gcc_r' into a single benchmark name, benchset name,
+1554559801.64: 	or metric name.
+1554559801.64: No benchmark suite selected!'all' replaced by ('fprate', 'fpspeed', 'intrate', 'intspeed') at position 0 of selection list
+1554559801.64:   Expected one or more of 'fprate', 'fpspeed', 'intrate', 'intspeed' or 'all'.
+1554559801.64: The log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.005.log
+1554559801.64: The debug log for this run is in /home/iiitd/Desktop/hw11/result/CPU2017.005.log.debug
+1554559801.64: *
+1554559801.64: * Temporary files were NOT deleted; keeping temporaries such as
+1554559801.64: * /home/iiitd/Desktop/hw11/result/CPU2017.005.log.debug
+1554559801.64: * (These may be large!)
+1554559801.64: *
+1554559801.64: runcpu finished at 2019-04-06 19:40:01; 0 total seconds elapsed
